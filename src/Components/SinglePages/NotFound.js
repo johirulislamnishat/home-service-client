@@ -1,7 +1,7 @@
 import React from 'react';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '../Banner/Banner.css';
+// import '../Banner/Banner.css';
 
 const goBack = () => window.history.back();
 

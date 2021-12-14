@@ -15,7 +15,7 @@ import PrivateRoute from './Authentication/PrivateRoute/PrivateRoute';
 function App() {
 
   useEffect(() => {
-    document.title = 'Welcome to Doctors || Get Your Appoint From Home'
+    document.title = 'Hello!! || Welcome To Home Service'
   }, []);
 
   return (

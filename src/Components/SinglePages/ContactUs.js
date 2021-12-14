@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import Banner from '../Banner/Banner';
 import FeaturedService from '../FeaturedService/FeaturedService';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
@@ -13,7 +12,7 @@ const Contact = () => {
   return (
     <div className="header-content">
       <Header />
-      <Banner />
+      {/* <Banner /> */}
       <FeaturedService />
       <ContactForm />
       <Footer />

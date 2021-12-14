@@ -5,12 +5,9 @@ import chair from '../../../images/chair.png';
 import bg from '../../../images/bg.png';
 import { Container, Typography } from '@mui/material';
 import Calendar from '../Calendar/Calendar';
-import Banner from '../../Banner/Banner';
 
 import { Link } from 'react-router-dom';
 import BannerImg from '../../../images/chair.png';
-import '../../Banner/Banner.css';
-
 const AppointmentHeader = ({ date, setDate }) => {
 
     return (

@@ -76,7 +76,7 @@ const Footer = () => {
 						</FooterCol>
 					</div>
 					<div className="copyRight text-center pb-3 text-secondary">
-						<p> &copy; 2021 Developed by Khosruz Zaman</p>
+						<p> &copy; 2021 Developed by Kamrul</p>
 					</div>
 				</div>
 			</footer>
