@@ -12,7 +12,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Avatar } from '@mui/material';
-import logo from '../../images/logo.png';
+import logo from '../../../src/logo.png';
 import { styled } from '@mui/material/styles';
 import Badge from '@mui/material/Badge';
 import Stack from '@mui/material/Stack';
@@ -142,8 +142,8 @@ function Dashboard() {
                     admin ? ( */}
 
                 <List style={{ fontSize: 16, marginTop: 10 }}>
-                    <ListItem button>
-                        <Link to={`${url}/admin-dashboard`}>
+                    <ListItem button >
+                        <Link to={`${url}/admin-dashboard`} >
                             <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faGripHorizontal} /> <span>Dashboard</span>
                         </Link>
                     </ListItem>
@@ -161,20 +161,14 @@ function Dashboard() {
                     </ListItem>
 
                     <ListItem button>
-                        <Link to={`${url}/prescriptions`}>
-                            <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faFileAlt} /> <span>Prescriptions</span>
+                        <Link to={`${url}/add-services`}>
+                            <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faUserPlus} /> <span>Add Services</span>
                         </Link>
                     </ListItem>
 
                     <ListItem button>
-                        <Link to={`${url}/add-doctors`}>
-                            <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faUserPlus} /> <span>Add Doctor</span>
-                        </Link>
-                    </ListItem>
-
-                    <ListItem button>
-                        <Link to={`${url}/manage-doctors`}>
-                            <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faArtstation} /> <span>Manage Doctors</span>
+                        <Link to={`${url}/manage-services`}>
+                            <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faArtstation} /> <span>Manage Services</span>
                         </Link>
                     </ListItem>
 
@@ -183,16 +177,9 @@ function Dashboard() {
                             <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faUserPlus} /> <span>Add New Admin</span>
                         </Link>
                     </ListItem>
-                    {/* {dummyCategories.map((text, index) => (
-        <ListItem button key={text}>
-            <ListItemText primary={text} />
-        </ListItem>
-    ))} */}
+
                 </List>
                 )
-
-
-
                 <List style={{ fontSize: 16, marginTop: 10 }}>
                     <ListItem button>
                         <Link to={`${url}/dashboard`}>
@@ -269,7 +256,7 @@ function Dashboard() {
                             <Item sx={{ flexGrow: 1 }}>
                                 <img alt="logo"
                                     src={logo}
-                                    sx={{ width: 56, height: 56 }} />
+                                    style={{ width: '50px', height: '50px' }} />
                             </Item>
 
                             <Item>
@@ -328,7 +315,7 @@ function Dashboard() {
 
             {/* main content  */}
             <div style={{ overflow: 'scroll' }} className={classes.content}>
-                <div className={classes.toolbar} />
+                <div style={{ backgroundColor: '#2095fc07' }} className={classes.toolbar} />
                 <DashboardContent />
             </div>
         </div>

@@ -19,8 +19,8 @@ const Home = () => {
                 <Header />
                 <TopBanner />
                 <TopInfographics />
-                <InfographicMiddle />
                 <Doctors />
+                <InfographicMiddle />
                 <Features />
                 <Testimonials />
                 <FeaturedService />

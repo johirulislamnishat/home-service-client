@@ -1,24 +1,24 @@
 const blogs = [
     {
-        title : 'Check at least a doctor in a year for your teeth',
-        description : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natus sit ipsam.        ',
-        author:'Dr. Cudi',
-        authorImg : 'https://imgur.com/Zt8inGj.png',
-        date : '23 April 2020'
+        title: '6 Cleaning Tips For When You Have Allergies',
+        description: 'Start up money or a decent amount of savings will get you started cleaning business Suspen disse convallis nulla vel bibendum porta.',
+        author: 'Mr. Jhon',
+        authorImg: 'https://imgur.com/Zt8inGj.png',
+        date: '30 March 2022'
     },
     {
-        title : 'Two time brush in a day can keep you healthy',
-        description : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natus sit ipsam.        ',
-        author:'Dr. Sinthia',
-        authorImg : 'https://imgur.com/wXJ3Xta.png',
-        date : '24 June 2020'
+        title: 'Tips For Cleaning Your Home Before A Party',
+        description: 'Start up money or a decent amount of savings will get you started cleaning business Suspen disse convallis nulla vel bibendum porta.',
+        author: 'Jhon Smith',
+        authorImg: 'https://imgur.com/wXJ3Xta.png',
+        date: '14 June 2019'
     },
     {
-        title : 'The tooth cancer is taking a challenge',
-        description : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, placeat totam laborum maiores, esse assumenda porro error natus sit ipsam.        ',
-        author:'Dr. Sanorita',
-        authorImg : 'https://imgur.com/GLJS9vL.png',
-        date : '05 September 2020'
+        title: 'Emergency Cleaning Tips For Your Big Day',
+        description: 'Start up money or a decent amount of savings will get you started cleaning business Suspen disse convallis nulla vel bibendum porta.',
+        author: 'Mr. Sanorita',
+        authorImg: 'https://imgur.com/GLJS9vL.png',
+        date: '05 Nov 2021'
     },
 ]
 

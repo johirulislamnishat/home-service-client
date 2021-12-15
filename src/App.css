@@ -31,8 +31,9 @@ a:hover {
 	color: #2097fc !important;
 }
 .text-main{
-	color:'#052944'
+	color:#052944
 }
+
 
 .btn-main{
 	background-color: #ffe52c !important;
@@ -41,6 +42,7 @@ a:hover {
 	font-size: '16px';
 	font-weight: 600;
 	border-radius: 50px;
+	cursor: pointer;
 }
 
 .btn-info {
@@ -124,12 +126,12 @@ p {
 }
 
 .reviewForm input,
-.doctorForm input {
+.serviceForm input {
 	height: 3rem;
 	border: none;
 }
 .reviewForm textarea,
-.doctorForm textarea {
+.serviceForm textarea {
 	border: none;
 }
 

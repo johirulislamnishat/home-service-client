@@ -3,17 +3,15 @@ import { Switch, Route, useRouteMatch } from "react-router-dom";
 import DashboardAdmin from './AdminArea/DashboardAdmin';
 import Patients from './AdminArea/ManagePatients';
 import Appointment from './AdminArea/Appointment';
-import Prescriptions from './AdminArea/Prescriptions';
-import AddDoctor from './AdminArea/AddDoctor';
 import DashboardUser from './UserArea/DashboardUser';
 import MyAppointment from './UserArea/MyAppointment';
-import MyPrescription from './UserArea/MyPrescriptions';
 import Review from './UserArea/Review';
 import AddAdmin from './AdminArea/AddAdmin';
-import ManageDoctors from './AdminArea/ManageDoctors';
 import Payment from './UserArea/Payment';
 import CardInfo from './UserArea/CardInfo';
 import SendMeetLink from './AdminArea/SendMeetLink';
+import ManageServices from './AdminArea/ManageServices';
+import AddServices from './AdminArea/AddServices';
 
 
 const DashboardContent = () => {
@@ -36,16 +34,12 @@ const DashboardContent = () => {
                     <Patients />
                 </Route>
 
-                <Route path={`${path}/prescriptions`}>
-                    <Prescriptions />
+                <Route path={`${path}/add-services`}>
+                    <AddServices />
                 </Route>
 
-                <Route path={`${path}/add-doctors`}>
-                    <AddDoctor />
-                </Route>
-
-                <Route path={`${path}/manage-doctors`}>
-                    <ManageDoctors />
+                <Route path={`${path}/manage-services`}>
+                    <ManageServices />
                 </Route>
 
                 <Route path={`${path}/add-new-admin`}>
@@ -67,10 +61,6 @@ const DashboardContent = () => {
 
                 <Route path={`${path}/payment/:appointmentId`}>
                     <Payment />
-                </Route>
-
-                <Route path={`${path}/prescription/:prescriptionId`}>
-                    <MyPrescription />
                 </Route>
 
                 <Route path={`${path}/cardInfo`}>

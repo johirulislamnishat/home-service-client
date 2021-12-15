@@ -26,7 +26,7 @@ const columns = [
     { id: 'delete', label: 'Delete', }
 
 ];
-const ManageDoctors = () => {
+const ManageServices = () => {
 
     //   table 
     const [page, setPage] = useState(0);
@@ -102,4 +102,4 @@ const ManageDoctors = () => {
     );
 };
 
-export default ManageDoctors;
+export default ManageServices;

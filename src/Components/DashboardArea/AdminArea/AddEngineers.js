@@ -1,8 +1,9 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
-const AddDoctor = () => {
+
+const AddEngineers = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -11,7 +12,7 @@ const AddDoctor = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        axios.post('http://localhost:5000/doctors', data)
+        axios.post('http://localhost:5000/services', data)
             .then(res => {
                 // console.log(res);
                 if (res.data.insertedId) {
@@ -26,22 +27,24 @@ const AddDoctor = () => {
     return (
         <div className="container-fluid row" style={{ backgroundColor: '#F4FDFB' }}>
 
-            <div id="responsive-dashboard" className="col-md-10 p-4 doctorForm mx-auto" style={{ backgroundColor: '#F4FDFB' }}>
-                <h5 className="text-brand mb-4">Add a Doctor</h5>
+            <div id="responsive-dashboard" className="col-md-10 p-4 serviceForm mx-auto" style={{ backgroundColor: '#F4FDFB' }}>
+                <h5 className="text-brand mb-4">Add a Service</h5>
                 <form onSubmit={handleSubmit(onSubmit)}>
+
+                    {/* service type  */}
                     <div className="form-group col-6">
-                        <label htmlFor="exampleInputEmail1">Category</label>
+                        <label htmlFor="exampleInputEmail1">Service Type</label>
                         <input
-                            {...register("category")}
+                            {...register("serviceType")}
                             type="text"
                             className="form-control"
-                            placeholder="Enter Category"
+                            placeholder="Enter Type Of Service"
                             required={true}
                         />
                     </div>
 
                     <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Name</label>
+                        <label htmlFor="exampleInputPassword1">Name Of Service</label>
                         <input
                             {...register("name")}
                             type="text"
@@ -147,17 +150,7 @@ const AddDoctor = () => {
                             required={true}
                         />
                     </div>
-                    {/* <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Upload a image (Optional)</label>
-                        <input
-                            onChange={handleFileChange}
-                            type="file"
-                            className="form-control"
-                            id="exampleInputPassword1"
-                            placeholder="Picture"
-                            required={true}
-                        />
-                    </div> */}
+
                     <button type="submit" className="btn btn-primary mt-2 ml-3">
                         Submit
                     </button>
@@ -167,4 +160,4 @@ const AddDoctor = () => {
     );
 };
 
-export default AddDoctor;
+export default AddEngineers;

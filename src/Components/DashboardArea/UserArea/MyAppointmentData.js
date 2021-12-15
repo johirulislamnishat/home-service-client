@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import { Link } from 'react-router-dom';
-import MeetLinkModal from './MeetLinkModal';
 
 const MyAppointmentData = ({ appointment }) => {
 
@@ -60,12 +59,12 @@ const MyAppointmentData = ({ appointment }) => {
 
             </TableRow>
 
-            <MeetLinkModal
+            {/* <MeetLinkModal
 
                 open={open}
                 handleClose={handleClose}
                 appointment={appointment}
-            ></MeetLinkModal>
+            ></MeetLinkModal> */}
         </>
     );
 };
