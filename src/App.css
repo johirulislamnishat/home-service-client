@@ -28,11 +28,23 @@ a:hover {
 	font-size: 18px;
 }
 .text-primary {
-	color: #1cc7c1 !important;
+	color: #2097fc !important;
+}
+.text-main{
+	color:'#052944'
+}
+
+.btn-main{
+	background-color: #ffe52c !important;
+	border-color: transparent !important;
+	color: #052944 !important;
+	font-size: '16px';
+	font-weight: 600;
+	border-radius: 50px;
 }
 
 .btn-info {
-	background-color: #76c5ff !important;
+	background-color: #2097fc !important;
 	border-color: transparent !important;
 }
 .btn-warning {
@@ -71,7 +83,7 @@ p {
 }
 
 .style-color {
-	color: #3a4256;
+	color: #052944;
 }
 
 .logo-name {

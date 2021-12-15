@@ -11,35 +11,35 @@ const Footer = () => {
 	const [modalIsOpen, setModalIsOpen] = useState(false);
 
 	const noNamed = [
-		{ name: 's.portal@gmail.com', link: '/' },
-		{ name: '+8809-6380-79309', link: '/checkup' },
-		{ name: 'Emergency Dental Care', link: '/emergency' },
-		{ name: 'Check Up', link: '/checkup' },
-		{ name: 'Treatment of Personal Diseases', link: '/personal-treatment' },
-		{ name: 'Tooth Extraction', link: '/tooth-extract' },
-		{ name: 'Check Up', link: '/checkup' }
+		{ name: 'support@clining.com', link: '/' },
+		{ name: '+091-8660-3539', link: '/' },
+		{ name: 'Emergency Home Service', link: '/' },
+		{ name: 'House Checkup', link: '/' },
+		{ name: 'School Service', link: '/' },
+		{ name: 'Home Extraction', link: '/' },
+		{ name: 'Home Repairing', link: '/' }
 	];
 	const ourAddress = [
-		{ name: 'House-1, Road 6, Dhaka 1205', link: '//google.com/map' },
-		{ name: 'View in map', link: '//google.com/map' }
+		{ name: 'Block#09, House#39, London', link: '/' },
+		{ name: 'Location in Google', link: '/' }
 	];
-	const oralHealth = [
-		{ name: 'Emergency Dental Care', link: '/emergency' },
-		{ name: 'Check Up', link: '/checkup' },
-		{ name: 'Treatment of Personal Diseases', link: '/personal-treatment' },
-		{ name: 'Tooth Extraction', link: '/tooth-extract' },
-		{ name: 'Check Up', link: '/checkup' },
-		{ name: 'Check Up', link: '/checkup' },
-		{ name: 'Check Up', link: '/checkup' }
+	const houseCleaning = [
+		{ name: 'Homeowner', link: '/' },
+		{ name: 'Self-Help Services', link: '/' },
+		{ name: 'Housing Counseling', link: '/' },
+		{ name: 'Housing & Education', link: '/' },
+		{ name: 'Repair & Access Services', link: '/' },
+		{ name: 'Cleaning with Care', link: '/' },
+		{ name: 'Self-Help Services', link: '/' }
 	];
 	const services = [
-		{ name: 'Emergency Dental Care', link: '/emergency' },
-		{ name: 'Check Up', link: '/checkup' },
-		{ name: 'Treatment of Personal Diseases', link: '/personal-treatment' },
-		{ name: 'Tooth Extraction', link: '/tooth-extract' },
-		{ name: 'Check Up', link: '/checkup' },
-		{ name: 'Check Up', link: '/checkup' },
-		{ name: 'Check Up', link: '/checkup' }
+		{ name: 'Enjoy Cleanliness', link: '/' },
+		{ name: 'Easy Online Scheduling', link: '/' },
+		{ name: 'Housing & Education', link: '/' },
+		{ name: 'Get Amazing Cleaning', link: '/' },
+		{ name: 'Residential Cleaning', link: '/' },
+		{ name: 'Commercial Cleaning', link: '/' },
+		{ name: 'After Renovation', link: '/' }
 	];
 	return (
 		<>
@@ -48,7 +48,7 @@ const Footer = () => {
 					<div className="row py-5">
 						<FooterCol key={1} menuTitle={"Online 's Portal"} menuItems={noNamed} />
 						<FooterCol key={2} menuTitle="Services" menuItems={services} />
-						<FooterCol key={3} menuTitle="Oral Health" menuItems={oralHealth} />
+						<FooterCol key={3} menuTitle="Oral Health" menuItems={houseCleaning} />
 						<FooterCol key={4} menuTitle="Our Address" menuItems={ourAddress}>
 							<ul className="social-media list-inline">
 								<li className="list-inline-item">
@@ -69,7 +69,7 @@ const Footer = () => {
 							</ul>
 							<div className="mt-2">
 								<h6 className="mb-2"> Open Admin Pannel</h6>
-								<button className="btn btn-primary" onClick={() => setModalIsOpen(true)}>
+								<button className="btn-main py-2 px-4" onClick={() => setModalIsOpen(true)}>
 									<FontAwesomeIcon className="icon mr-2" icon={faUser} />Admin Panel
 								</button>
 							</div>

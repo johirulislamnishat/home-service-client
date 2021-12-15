@@ -1,12 +1,12 @@
 #features {
-	background: #f0f8ff;
+	background: #2095fc07;
 	min-height: 100vh;
 }
 
 #features .icon span {
 	font-size: 30px;
-	background: #0a9be1;
-	color: #fff;
+	background: #ffe52c;
+	color: #052944;
 	width: 42px;
 	height: 42px;
 	display: inline-block;
@@ -17,6 +17,7 @@
 
 .features-item-text {
 	padding: 0 25px;
+	text-align: left !important;
 }
 
 #features h4 {

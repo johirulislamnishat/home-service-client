@@ -1,18 +1,23 @@
-const features =  [
+const features = [
     {
-        icon : '1',
-        title : "Create Appointments",
-        description : 'Visit the Online Doctors Portal web app and create your account in less than a minute, and make appointments easily form our specialist doctors.'
+        icon: '1',
+        title: "Pick a Time",
+        description: 'Select the day and time for your service and get instant, affordable pricing.'
     },
     {
-        icon : '2',
-        title : "Get Medical Consultation",
-        description : 'You can make an instant appointment and get the advice of a doctor in a video call, or you can make an appointment with a specialist doctor of your choice for the next time.'
+        icon: '2',
+        title: "Book instantly",
+        description: "We'll confirm your appointment and take care of payment electronically and securely."
     },
     {
-        icon : '3',
-        title : "Get E-Prescription",
-        description : 'As soon as the video call ends, you will get the e-prescription given by the doctor in your app. You will also be given a reminder to take the medicine on time.'
-    },   
+        icon: '3',
+        title: "Your pro arrives",
+        description: 'An experienced, fully-equipped professional will show up on time at your doorstep.'
+    },
+    {
+        icon: '4',
+        title: "Your pro arrives",
+        description: 'An experienced, fully-equipped professional will show up on time at your doorstep.'
+    },
 ]
 export default features;

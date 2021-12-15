@@ -5,22 +5,22 @@ import './Features.css';
 
 const items = [
 	{
-		src: 'https://i.imgur.com/wKeBuuY.png'
+		src: 'https://i.ibb.co/r6VtMFs/slide5.png'
 	},
 	{
-		src: 'https://i.imgur.com/yN1hGTi.png'
+		src: 'https://i.ibb.co/1n7QLsP/slide3.png'
 	},
 	{
-		src: 'https://i.imgur.com/dmNBC61.png'
+		src: 'https://i.ibb.co/XWTy3w4/banner3.png'
 	},
 	{
-		src: 'https://i.imgur.com/egLZkQ0.png'
+		src: 'https://i.ibb.co/6wDJNfh/banner2.png'
 	}
 ];
 
 const Features = () => {
-	const [ activeIndex, setActiveIndex ] = React.useState(0);
-	const [ animating, setAnimating ] = React.useState(false);
+	const [activeIndex, setActiveIndex] = React.useState(0);
+	const [animating, setAnimating] = React.useState(false);
 
 	const onExiting = () => {
 		setAnimating(true);
@@ -46,7 +46,7 @@ const Features = () => {
 	const slides = items.map((item) => {
 		return (
 			<CarouselItem onExiting={onExiting} onExited={onExited} key={item.src}>
-				<img src={item.src} alt={item.altText} width="100%" className="img-fluid" />
+				<img src={item.src} alt={item.altText} width="100%" className="img-fluid carousel-inner" />
 			</CarouselItem>
 		);
 	});
@@ -57,8 +57,8 @@ const Features = () => {
 				<div className="row">
 					<div className="mt-4">
 						<h4 className="mb-5 mt-5 text-center">
-							Time and distance are no longer a matter of concern. Easily receive advice on physical
-							illness or health issues through video calling.
+							Home Repair Services strengthens vulnerable Kent County
+							homeowners because strong homeowners build strong communities.
 						</h4>
 					</div>
 					<div className="col-md-6 align-self-center">
@@ -71,14 +71,14 @@ const Features = () => {
 										</div>
 										<div className="features-item-text">
 											<h6>{feature.title}</h6>
-											<p>{feature.description}</p>
+											<p style={{ textAlign: 'left' }}>{feature.description}</p>
 										</div>
 									</div>
 								</li>
 							))}
 						</ul>
 					</div>
-					<div className="col-md-6">
+					<div className="col-md-6 carousel-inner">
 						<Carousel
 							activeIndex={activeIndex}
 							next={next}
@@ -90,10 +90,10 @@ const Features = () => {
 							slide={false}
 							className="carousel-fade"
 						>
-							<CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} className="d-none"/>
+							<CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} className="d-none" />
 							{slides}
-							<CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-							<CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+							{/* <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+							<CarouselControl direction="next" directionText="Next" onClickHandler={next} /> */}
 						</Carousel>
 					</div>
 				</div>

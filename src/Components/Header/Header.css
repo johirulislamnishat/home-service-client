@@ -1,6 +1,6 @@
 .HeaderBg{
     
-    background-color: #282c34;
+    background-color: #ffffff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     z-index: 99;
     display: flex;
@@ -23,6 +23,8 @@
   .Logo {
     grid-area: logo;
     height: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   
   .Nav {
@@ -33,14 +35,15 @@
     justify-items: center;
   }
   .Nav a {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 400;
+    color: #052944;
+    font-size: 16px;
+    font-weight: 600;
     transition: 0.5s;
     text-decoration: none;
   }
   .Nav a:hover {
     transform: scale(1.1);
+    color: #2097fc;
   }
   .Nav button {
     padding: 10px;

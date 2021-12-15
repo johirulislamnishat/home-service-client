@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import featuredImg from '../../images/featured.png';
+import featuredImg from '../../images/slide2.png';
 
 const FeaturedService = () => {
 	return (
@@ -8,14 +8,13 @@ const FeaturedService = () => {
 			<div className="container mb-5">
 				<div className="row mb-5">
 					<div className="col-md-7 align-self-center">
-						<h1 className="style-color"> Are You a Specialized Doctor ?</h1>
+						<h1 className="style-color"> Are You a Specialized Engineer ?</h1>
 						<p className="text-secondary my-5" style={{ fontSize: '20px' }}>
-							Join Our Online Doctors Portal Team and Create your Virtual Chamber. Provide Medical
-							Consultancy via video call and expand the reach of your service. We have a strong network of
-							Bangladeshi registered doctors that you can trust.
+							Welcome. And We are inviting to join our creative team and Create your own identity. Provide Engineer
+							Consultancy via video call and expand the reach of your service. We have a strong network.
 						</p>
 						<Link to="/registration">
-							<button className="btn btn-primary button-style mb-5">Sign Up</button>
+							<button className="btn-main py-2 px-4 button-style mb-5">Sign Up</button>
 						</Link>
 					</div>
 					<div className="col-md-5 mb-4">

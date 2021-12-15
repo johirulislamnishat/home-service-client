@@ -1,6 +1,5 @@
 import React from 'react';
-import AppointmentBanner from '../AppointmentBanner/AppointmentBanner';
-import Services from '../Services/Services';
+import InfographicMiddle from '../InfographicMiddle/InfographicMiddle';
 import Header from '../../Header/Header';
 import Footer from '../../Footer/Footer';
 import Features from '../../Features/Features';
@@ -9,6 +8,7 @@ import FeaturedService from '../../FeaturedService/FeaturedService';
 import Blogs from '../../Blogs/Blogs';
 import Doctors from '../../Doctors/Doctors';
 import TopBanner from '../TopBar/TopBanner';
+import TopInfographics from '../TopInfographics/TopInfographics';
 
 const Home = () => {
     return (
@@ -18,8 +18,8 @@ const Home = () => {
 
                 <Header />
                 <TopBanner />
-                <Services />
-                <AppointmentBanner />
+                <TopInfographics />
+                <InfographicMiddle />
                 <Doctors />
                 <Features />
                 <Testimonials />

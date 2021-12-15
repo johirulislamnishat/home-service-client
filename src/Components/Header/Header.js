@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../App.css';
 import useAuth from '../../Authentication/Hooks/useAuth';
-import logo from '../../images/logo.png';
+import logo from '../../logo.png';
 import "./Header.css";
 import { CSSTransition } from "react-transition-group";
 
@@ -53,7 +53,7 @@ const Header = () => {
 		<>
 			<div className='HeaderBg'>
 				<div className="Header container mx-auto">
-					<img src='logo' className="Logo" alt="logo" />
+					<img src={logo} className="Logo" alt="logo" />
 					<CSSTransition
 						in={!isSmallScreen || isNavVisible}
 						timeout={350}

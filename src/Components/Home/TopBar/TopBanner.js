@@ -11,7 +11,7 @@ const TopBanner = () => {
         <>
             <Carousel showThumbs={false} autoPlay={2000} infiniteLoop={true}>
                 <div id="myCarousel" class="carousel slide">
-                    <div class="carousel-inner">
+                    <div class="carousel-middle">
                         <div class="item active">
 
                             <div class="fill" style={{ backgroundImage: "url('https://media.istockphoto.com/photos/technician-services-outside-ac-units-and-generator-picture-id1315493892?k=20&m=1315493892&s=612x612&w=0&h=_b5fWkSRiFLGlSxMpMASBwNMw7fdgSukwzTwvWtLO64=')" }}></div>
