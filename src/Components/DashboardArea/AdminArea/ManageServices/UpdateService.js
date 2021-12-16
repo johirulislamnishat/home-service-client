@@ -8,14 +8,14 @@ import Sneackbar from '../../../Sneackbar';
 
 const UpdateService = ({ open, handleClose, service }) => {
 
-    // console.log(doctor)
+    // console.log(service)
     const { serviceName, serviceType, serviceTitle, serviceOverview, serviceRating } = service;
     const [openSneackBar, setOpenSneackBar] = useState(false);
 
     const handleOnSubmit = e => {
         // e.email = (email)
         // // collect data
-        // const bookAppoint = {
+        // const bookService = {
         //     ...bookingInfo,
         //     name,
         //     category,
@@ -27,12 +27,12 @@ const UpdateService = ({ open, handleClose, service }) => {
         // }
 
         //send data to server
-        // fetch('http://localhost:5000/appointments', {
+        // fetch('http://localhost:5000/services', {
         //     method: 'POST',
         //     headers: {
         //         'content-type': 'application/json'
         //     },
-        //     body: JSON.stringify(bookAppoint)
+        //     body: JSON.stringify(bookService)
         // })
         //     .then(res => res.json())
         //     .then(data => {
@@ -98,7 +98,7 @@ const UpdateService = ({ open, handleClose, service }) => {
                         <TextField
                             id="outlined-disabled"
                             sx={{ width: '100%', mb: 2 }}
-                            label="Doctor Image Link"
+                            label="service Image Link"
                             defaultValue={serviceTitle}
                         />
 
@@ -106,7 +106,7 @@ const UpdateService = ({ open, handleClose, service }) => {
 
                             id="outlined-disabled"
                             sx={{ width: '100%', mb: 2 }}
-                            label="Doctor Name"
+                            label="service Name"
                             defaultValue={serviceOverview}
                         />
 

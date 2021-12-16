@@ -18,7 +18,7 @@ const FeaturedService = () => {
 						</Link>
 					</div>
 					<div className="col-md-5 mb-4">
-						<img className="img-fluid" src={featuredImg} alt="doctor-need" />
+						<img className="img-fluid" src={featuredImg} alt="service-need" />
 					</div>
 				</div>
 			</div>

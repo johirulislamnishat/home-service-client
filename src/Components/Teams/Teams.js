@@ -9,7 +9,7 @@ import Footer from '../Footer/Footer';
 import { Link } from 'react-router-dom';
 const Teams = () => {
 
-    const appointmentBanner = {
+    const banner = {
 
         backgroundColor: '#2095fc07',
         backgroundBlendMode: 'darken',
@@ -34,7 +34,7 @@ const Teams = () => {
             <Header />
 
             <div>
-                <Box style={appointmentBanner} sx={{ flexGrow: 1, paddingTop: 5, paddingBottom: 5 }}>
+                <Box style={banner} sx={{ flexGrow: 1, paddingTop: 5, paddingBottom: 5 }}>
                     <Container>
                         <Grid container spacing={2}>
 

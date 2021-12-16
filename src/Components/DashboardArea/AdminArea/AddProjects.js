@@ -71,7 +71,7 @@ const AddProjects = () => {
                             {...register("clientName")}
                             type="email"
                             className="form-control"
-                            placeholder="Enter Doctor Email"
+                            placeholder="Enter service Email"
                             required={true}
                         />
                     </div>
@@ -82,7 +82,7 @@ const AddProjects = () => {
                             {...register("education")}
                             type="text"
                             className="form-control"
-                            placeholder="Enter Doctor Education"
+                            placeholder="Enter service Education"
                             required={true}
                         />
                     </div>
@@ -92,7 +92,7 @@ const AddProjects = () => {
                             {...register("designation")}
                             type="text"
                             className="form-control"
-                            placeholder="Enter Doctor Designation"
+                            placeholder="Enter service Designation"
                             required={true}
                         />
                     </div>
@@ -102,7 +102,7 @@ const AddProjects = () => {
                             {...register("department")}
                             type="text"
                             className="form-control"
-                            placeholder="Enter Doctor Department"
+                            placeholder="Enter service Department"
                             required={true}
                         />
                     </div>
@@ -113,7 +113,7 @@ const AddProjects = () => {
                             {...register("hospital")}
                             type="text"
                             className="form-control"
-                            placeholder="Enter Doctor Hospital"
+                            placeholder="Enter service Hospital"
                             required={true}
                         />
                     </div>

@@ -11,7 +11,7 @@ const Testimonial = (props) => {
 					<p class="card-text text-center">{quote}</p>
 				</div>
 				<div className="card-footer d-flex  align-items-center">
-					<img className="mx-3" src={img} alt="patient" width="70" height="70" style={{ borderRadius: '50%' }} />
+					<img className="mx-3" src={img} alt="user" width="70" height="70" style={{ borderRadius: '50%' }} />
 					<div>
 						<h6 className="text-primary">{name}</h6>
 

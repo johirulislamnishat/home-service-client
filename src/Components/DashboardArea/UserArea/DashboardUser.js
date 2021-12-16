@@ -5,7 +5,7 @@ import { Container, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const DashboardUser = () => {
-    const appointmentBanner = {
+    const banner = {
 
         backgroundColor: '#2095fc07',
         backgroundBlendMode: 'darken',
@@ -129,7 +129,7 @@ const DashboardUser = () => {
 
                 <div className='mt-5'>
                     <div>
-                        <Box style={appointmentBanner} sx={{ flexGrow: 1, paddingTop: 5, paddingBottom: 5 }}>
+                        <Box style={banner} sx={{ flexGrow: 1, paddingTop: 5, paddingBottom: 5 }}>
                             <Container>
                                 <Grid container spacing={2}>
 

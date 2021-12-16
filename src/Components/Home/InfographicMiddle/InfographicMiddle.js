@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const InfographicMiddle = () => {
 
-    const appointmentBanner = {
+    const banner = {
 
         backgroundColor: '#2095fc07',
         backgroundBlendMode: 'darken',
@@ -18,7 +18,7 @@ const InfographicMiddle = () => {
     }
 
     return (
-        <Box style={appointmentBanner} sx={{ flexGrow: 1, paddingTop: 5, paddingBottom: 5 }}>
+        <Box style={banner} sx={{ flexGrow: 1, paddingTop: 5, paddingBottom: 5 }}>
             <Container>
                 <Grid container spacing={2}>
 

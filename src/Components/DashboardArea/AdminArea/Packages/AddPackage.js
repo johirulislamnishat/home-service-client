@@ -48,7 +48,7 @@ const AddPackage = () => {
                             {...register("name")}
                             type="text"
                             className="form-control"
-                            placeholder="Enter Doctor Name"
+                            placeholder="Enter service Name"
                             required={true}
                         />
                     </div>
@@ -59,7 +59,7 @@ const AddPackage = () => {
                             {...register("phone")}
                             type="text"
                             className="form-control"
-                            placeholder="Enter Doctor Number"
+                            placeholder="Enter service Number"
                             required={true}
                         />
                     </div>
@@ -70,7 +70,7 @@ const AddPackage = () => {
                             {...register("email")}
                             type="email"
                             className="form-control"
-                            placeholder="Enter Doctor Email"
+                            placeholder="Enter service Email"
                             required={true}
                         />
                     </div>
@@ -81,7 +81,7 @@ const AddPackage = () => {
                             {...register("education")}
                             type="text"
                             className="form-control"
-                            placeholder="Enter Doctor Education"
+                            placeholder="Enter service Education"
                             required={true}
                         />
                     </div>
@@ -91,7 +91,7 @@ const AddPackage = () => {
                             {...register("designation")}
                             type="text"
                             className="form-control"
-                            placeholder="Enter Doctor Designation"
+                            placeholder="Enter service Designation"
                             required={true}
                         />
                     </div>
@@ -101,7 +101,7 @@ const AddPackage = () => {
                             {...register("department")}
                             type="text"
                             className="form-control"
-                            placeholder="Enter Doctor Department"
+                            placeholder="Enter service Department"
                             required={true}
                         />
                     </div>
@@ -112,7 +112,7 @@ const AddPackage = () => {
                             {...register("hospital")}
                             type="text"
                             className="form-control"
-                            placeholder="Enter Doctor Hospital"
+                            placeholder="Enter service Hospital"
                             required={true}
                         />
                     </div>
