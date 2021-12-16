@@ -20,7 +20,7 @@ const Testimonials = () => {
 	}, []);
 
 	return (
-		<section className="testimonials my-5 py-4">
+		<div className="testimonials mt-5 py-4">
 			<div className="container">
 				<div className="section-header">
 					<h5 className="text-primary text-uppercase text-center">FeedBack</h5>
@@ -44,7 +44,7 @@ const Testimonials = () => {
 					))}
 				</Swiper>
 			</div>
-		</section>
+		</div>
 	);
 };
 

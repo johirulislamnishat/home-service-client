@@ -66,9 +66,9 @@ const Header = () => {
 							</Link>
 
 							{user?.email ?
-								<Link onClick={logOut} to="/">
+								<Link className='btn-main py-2 px-4' onClick={logOut} to="/">
 									Sign Out
-								</Link> : <Link to="/login">
+								</Link> : <Link className='btn-main py-2 px-4' to="/login">
 									Sign In
 								</Link>}
 						</nav>

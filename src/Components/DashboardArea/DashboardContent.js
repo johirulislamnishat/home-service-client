@@ -1,7 +1,6 @@
 import React from 'react';
 import { Switch, Route, useRouteMatch } from "react-router-dom";
 import DashboardAdmin from './AdminArea/DashboardAdmin';
-import Appointment from './AdminArea/Appointment';
 import DashboardUser from './UserArea/DashboardUser';
 import Review from './UserArea/Review';
 import AddAdmin from './AdminArea/AddAdmin';
@@ -23,10 +22,6 @@ const DashboardContent = () => {
 
                 <Route path={`${path}/admin-dashboard`} >
                     <DashboardAdmin />
-                </Route>
-
-                <Route path={`${path}/appointments`}>
-                    <Appointment />
                 </Route>
 
                 <Route path={`${path}/add-services`}>

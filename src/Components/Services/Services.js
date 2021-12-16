@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';
 import Service from './Service';
 import './Services.css';
+import { Typography } from '@mui/material';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, Virtual]);
 
@@ -23,8 +24,13 @@ const Services = () => {
     return (
         <div className="services">
             <div className="container my-5">
-                <h1 className="text-center text-primary my-5">Our Services</h1>
-                <div className="services-view">
+                <Typography sx={{ color: "#2097fc", mb: 2, mt: 10, textAlign: 'center' }} variant="h6" component="div">
+                    OUR SERVICES
+                </Typography>
+                <Typography sx={{ textAlign: 'center' }} variant="h4" component="div">
+                    Services We Provide
+                </Typography>
+                <div className="services-view mt-5">
                     <Swiper
                         spaceBetween={20}
                         slidesPerView={3}

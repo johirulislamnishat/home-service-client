@@ -107,11 +107,11 @@ const Footer = () => {
 					<h5 className="text-secondary mb-3">Email: admin@admin.com</h5>
 					<h6 className="text-secondary mb-3">Password: admin@123456</h6>
 					<p className="text-center mb-2 mt-3 px-5">
-						<small>Or you can create a new account or signIn with a account which You did not use or provide as an patient appointment email. </small>
+						<small>Or you can create a new account or signIn with a account which You did not use or provide. </small>
 					</p>
 					<div className="form-group text-center mt-2">
 						<Link to="/dashboard">
-							<button className="btn btn-success mr-3 text-white">Open Admin Panel</button>
+							<button className="btn-main py-2 px-4 mr-3 text-white">Open Admin Panel</button>
 						</Link>
 					</div>
 				</form>

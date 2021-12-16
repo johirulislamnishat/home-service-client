@@ -1,6 +1,7 @@
 import React from 'react';
 import Rating from 'react-rating';
 
+
 const Testimonial = (props) => {
 	const { quote, name, from, img, rating } = props.reviews;
 	return (

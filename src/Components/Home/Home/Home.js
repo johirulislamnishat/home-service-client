@@ -10,6 +10,7 @@ import TopBanner from '../TopBar/TopBanner';
 import TopInfographics from '../TopInfographics/TopInfographics';
 import Services from '../../Services/Services';
 import Engineers from '../Engineers/Engineers';
+import Package from '../Package/Package';
 
 const Home = () => {
     return (
@@ -21,9 +22,10 @@ const Home = () => {
                 <TopBanner />
                 <TopInfographics />
                 <Services />
+                <Package />
                 <InfographicMiddle />
-                <Features />
                 <Engineers />
+                <Features />
                 <Testimonials />
                 <FeaturedService />
                 <Blogs />

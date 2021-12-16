@@ -149,12 +149,6 @@ function Dashboard() {
                     </ListItem>
 
                     <ListItem button>
-                        <Link to={`${url}/appointments`} >
-                            <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faCalendar} /> <span>Appointment</span>
-                        </Link>
-                    </ListItem>
-
-                    <ListItem button>
                         <Link to={`${url}/add-services`}>
                             <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faUserPlus} /> <span>Add Services</span>
                         </Link>

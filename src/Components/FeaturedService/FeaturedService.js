@@ -4,9 +4,9 @@ import featuredImg from '../../images/slide2.png';
 
 const FeaturedService = () => {
 	return (
-		<section className="features-service my-5">
+		<div style={{ background: '#2095fc07' }} className="features-service py-5">
 			<div className="container mb-5">
-				<div className="row mb-5">
+				<div className="row ">
 					<div className="col-md-7 align-self-center">
 						<h1 className="style-color"> Are You a Specialized Engineer ?</h1>
 						<p className="text-secondary my-5" style={{ fontSize: '20px' }}>
@@ -22,7 +22,7 @@ const FeaturedService = () => {
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 	);
 };
 

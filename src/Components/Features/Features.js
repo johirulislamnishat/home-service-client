@@ -52,7 +52,7 @@ const Features = () => {
 	});
 
 	return (
-		<section id="features">
+		<div id="features">
 			<div className="container">
 				<div className="row">
 					<div className="mt-4">
@@ -98,7 +98,7 @@ const Features = () => {
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 	);
 };
 

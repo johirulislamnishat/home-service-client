@@ -3,7 +3,8 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import useAuth from '../Hooks/useAuth';
-import './Login.css'
+import logo from '../../images/logo.png';
+import './Login.css';
 
 const Login = () => {
 
@@ -64,17 +65,17 @@ const Login = () => {
             <div class="mt-5 container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
                 <div class="card card0 border-0">
                     <div class="row d-flex">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 d-flex justify-content- center align-items- center">
                             <div class="card1 pb-5">
-                                <div class="row"> <img src="https://i.imgur.com/CXQmsmF.png" class="logo" alt='icon' /> </div>
-                                <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="https://i.imgur.com/uNGdWHi.png" class="image" alt='icon' /> </div>
+
+                                <div class="row px-3 mt-4 mb-5 border-line"> <img src="https://i.ibb.co/WxwSkC7/home-serve.png" class="image" alt='icon' /> </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="card2 card border-0 px-4 py-5">
                                 <div>
                                     <form onSubmit={handleLogin}>
-                                        <h2>Sign In Your Account</h2>
+                                        <h4 style={{ textAlign: 'center' }}>Sign In Your Account</h4>
                                         <p class="hint-text">Sign in with your social media account or email address</p>
                                         <div class="social-btn text-center">
 
@@ -96,7 +97,7 @@ const Login = () => {
                                             <input type="password" class="form-control input-lg" name="confirm_password" placeholder="Confirm Password" required="required" />
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-success btn-lg btn-block signup-btn">Sign In</button>
+                                            <button type="submit" class="btn-main btn-lg btn-block signup-btn">Sign In</button>
                                         </div>
                                     </form>
 

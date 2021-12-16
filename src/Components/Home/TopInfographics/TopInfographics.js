@@ -32,10 +32,10 @@ const TopInfographics = () => {
         <Box sx={{ flexGrow: 1 }} style={{ marginTop: 40 }}>
             <Container>
                 <Typography sx={{ color: "#2097fc", mb: 2, mt: 10, textAlign: 'center' }} variant="h6" component="div">
-                    OUR SERVICES
+                    BEST FEATURES
                 </Typography>
                 <Typography sx={{ textAlign: 'center' }} variant="h4" component="div">
-                    Services We Provide
+                    Our Best Features
                 </Typography>
                 <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {infographicsTop.map((infographic, index) => (

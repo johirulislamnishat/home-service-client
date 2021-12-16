@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Container, Typography } from '@mui/material';
 import image from '../../../images/home-serve.png';
-import bg from '../../../images/banner-img-2.jpg';
 import { Link } from 'react-router-dom';
 
 

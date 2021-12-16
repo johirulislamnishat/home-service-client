@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Services.css';
+import Rating from 'react-rating';
 
 const Service = ({ service }) => {
 	const { serviceType
@@ -22,10 +23,6 @@ const Service = ({ service }) => {
 		<div className="single-service">
 
 			<img className="img-fluid service-image" src={mainImage} alt="service" />
-			{/* {!doctorsData.image ? (
-			) : (
-				<img style={{ height: '200px' }} src={`data:image/png;base64,${doctorsData.image.img}`} alt="doctor" />
-			)} */}
 
 			<div className="service-description">
 				<p className="service-category">{serviceType}</p>
@@ -43,8 +40,16 @@ const Service = ({ service }) => {
 					<span> </span>
 				)}
 
-				<h6 className="smallText">{serviceRating}</h6>
-				<h6 className="smallText">৳ {price}</h6>
+
+				<div className='d-flex justify-content-between mt-2'>
+					<h6 className="smallText">৳ {price}</h6>
+					<Rating
+						initialRating={serviceRating}
+						readonly
+						emptySymbol='far fa-star text-warning'
+						fullSymbol='fas fa-star text-warning'
+					/>
+				</div>
 				<div className="text-center">
 					<Link to="/services">
 						<button className="btn-main button-style mt-3 py-2 px-3">
