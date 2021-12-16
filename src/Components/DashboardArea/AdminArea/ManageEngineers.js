@@ -6,23 +6,18 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import React, { useEffect, useState } from 'react';
-import PatientInfo from './PatientInfo';
+import EngineerInfo from './EngineerInfo';
 
 const columns = [
-    { id: 'user', label: 'Patient Name', minWidth: 170, },
-    { id: 'age', label: 'Age', minWidth: 40, },
-    { id: 'weight', label: 'Weight', minWidth: 40, },
-    { id: 'phone', label: 'Phone Number', minWidth: 100, },
-    { id: 'email', label: 'Email', minWidth: 150, },
-    { id: 'location', label: 'Location', minWidth: 150, },
-    { id: 'meetlink', label: 'MeetLink', minWidth: 150, },
-    { id: 'prescription', label: 'Prescription', minWidth: 180, },
-    { id: 'status', label: 'Status', },
+    { id: 'engineerName', label: 'Engineer Name', minWidth: 180, },
+    { id: 'engineerNumber', label: 'Phone Number', minWidth: 140, },
+    { id: 'engineerEmail', label: 'Engineer Email', minWidth: 180, },
+    { id: 'engineerLocation', label: 'Engineer Location', minWidth: 150, },
     { id: 'action', label: 'Action', }
 
 ];
 
-const Patients = () => {
+const ManageEngineers = () => {
 
 
     const [page, setPage] = useState(0);
@@ -38,27 +33,17 @@ const Patients = () => {
     };
 
 
-    // patient data
+    // engineer data
 
-    const [patients, setPatients] = useState([]);
+    const [engineers, setEngineers] = useState([]);
 
     useEffect(() => {
-        const url = (`http://localhost:5000/appointments/`)
+        const url = (`http://localhost:5000/engineers/`)
         fetch(url)
             .then(res => res.json())
             // .then(data => console.log(data))
-            .then(data => setPatients(data))
+            .then(data => setEngineers(data))
     }, [])
-
-    const [users, setUsers] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:5000/users')
-            .then(res => res.json())
-            .then(data => setUsers(data))
-    }, [])
-
-
 
     return (
 
@@ -82,14 +67,14 @@ const Patients = () => {
                         </TableHead>
 
                         <TableBody>
-                            {patients
+                            {engineers
                                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                                .map((patient) => {
+                                .map((engineer) => {
                                     return (
-                                        <PatientInfo
-                                            key={patient._id}
-                                            patient={patient}
-                                        ></PatientInfo>
+                                        <EngineerInfo
+                                            key={engineer._id}
+                                            engineer={engineer}
+                                        ></EngineerInfo>
                                     );
                                 })}
                         </TableBody>
@@ -99,7 +84,7 @@ const Patients = () => {
                 <TablePagination
                     rowsPerPageOptions={[10, 25, 100]}
                     component="div"
-                    count={users.length}
+                    count={engineers.length}
                     rowsPerPage={rowsPerPage}
                     page={page}
                     onPageChange={handleChangePage}
@@ -111,4 +96,4 @@ const Patients = () => {
     );
 };
 
-export default Patients;
+export default ManageEngineers;

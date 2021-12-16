@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Prescriptions = () => {
+const ManagePackage = () => {
     return (
         <div>
             Prescriptions
@@ -8,4 +8,4 @@ const Prescriptions = () => {
     );
 };
 
-export default Prescriptions;
+export default ManagePackage;

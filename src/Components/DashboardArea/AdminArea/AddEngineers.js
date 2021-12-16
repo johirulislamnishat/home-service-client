@@ -54,6 +54,29 @@ const AddEngineers = () => {
                             required={true}
                         />
                     </div>
+                    {/* engineer phone  */}
+                    <div className="form-group col-6">
+                        <label htmlFor="exampleInputEmail1">Phone Number</label>
+                        <input
+                            {...register("engineerNumber")}
+                            type="text"
+                            className="form-control"
+                            placeholder="Enter Engineer Number"
+                            required={true}
+                        />
+                    </div>
+
+                    {/* engineer email  */}
+                    <div className="form-group col-6">
+                        <label htmlFor="exampleInputEmail1">Engineer Email</label>
+                        <input
+                            {...register("engineerEmail")}
+                            type="email"
+                            className="form-control"
+                            placeholder="Enter Engineer Email"
+                            required={true}
+                        />
+                    </div>
 
                     {/* short description */}
                     <div className="form-group col-6">
@@ -75,6 +98,18 @@ const AddEngineers = () => {
                             type="text"
                             className="form-control"
                             placeholder="Write Long Description"
+                            required={true}
+                        />
+                    </div>
+
+                    {/* engineer location  */}
+                    <div className="form-group col-6">
+                        <label htmlFor="exampleInputPassword1">Engineer Location</label>
+                        <input
+                            {...register("engineerLocation")}
+                            type="text"
+                            className="form-control"
+                            placeholder="Enter Engineer Location"
                             required={true}
                         />
                     </div>

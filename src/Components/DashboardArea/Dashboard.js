@@ -155,12 +155,6 @@ function Dashboard() {
                     </ListItem>
 
                     <ListItem button>
-                        <Link to={`${url}/patients`}>
-                            <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faUsers} /> <span>Patients</span>
-                        </Link>
-                    </ListItem>
-
-                    <ListItem button>
                         <Link to={`${url}/add-services`}>
                             <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faUserPlus} /> <span>Add Services</span>
                         </Link>
@@ -176,6 +170,13 @@ function Dashboard() {
                     <ListItem button>
                         <Link to={`${url}/manage-services`}>
                             <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faArtstation} /> <span>Manage Services</span>
+                        </Link>
+                    </ListItem>
+
+                    {/* manage engineers  */}
+                    <ListItem button>
+                        <Link to={`${url}/manage-engineers`}>
+                            <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faUsers} /> <span>Manage Engineers</span>
                         </Link>
                     </ListItem>
 

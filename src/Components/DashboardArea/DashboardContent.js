@@ -1,18 +1,17 @@
 import React from 'react';
 import { Switch, Route, useRouteMatch } from "react-router-dom";
 import DashboardAdmin from './AdminArea/DashboardAdmin';
-import Patients from './AdminArea/ManagePatients';
 import Appointment from './AdminArea/Appointment';
 import DashboardUser from './UserArea/DashboardUser';
 import Review from './UserArea/Review';
 import AddAdmin from './AdminArea/AddAdmin';
 import Payment from './UserArea/Payments/Payment';
 import CardInfo from './UserArea/Payments/CardInfo';
-import SendMeetLink from './AdminArea/SendMeetLink';
 import ManageServices from './AdminArea/ManageServices/ManageServices';
 import AddServices from './AdminArea/ManageServices/AddServices';
 import MybookedServices from './UserArea/MyBookedServices/MyBookedServices';
 import AddEngineers from './AdminArea/AddEngineers';
+import ManageEngineers from './AdminArea/ManageEngineers';
 
 
 const DashboardContent = () => {
@@ -30,10 +29,6 @@ const DashboardContent = () => {
                     <Appointment />
                 </Route>
 
-                <Route path={`${path}/patients`}>
-                    <Patients />
-                </Route>
-
                 <Route path={`${path}/add-services`}>
                     <AddServices />
                 </Route>
@@ -46,12 +41,12 @@ const DashboardContent = () => {
                     <ManageServices />
                 </Route>
 
-                <Route path={`${path}/add-new-admin`}>
-                    <AddAdmin />
+                <Route path={`${path}/manage-engineers`}>
+                    <ManageEngineers />
                 </Route>
 
-                <Route path={`${path}/meetlink/:meetingId`}>
-                    <SendMeetLink />
+                <Route path={`${path}/add-new-admin`}>
+                    <AddAdmin />
                 </Route>
 
                 {/* user menu  */}

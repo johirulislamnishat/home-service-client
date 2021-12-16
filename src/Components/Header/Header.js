@@ -33,21 +33,7 @@ const Header = () => {
 	const toggleNav = () => {
 		setNavVisibility(!isNavVisible);
 	};
-	// const [isSticky, setSticky] = useState(false);
-	// const [isCollapsed, setCollapsed] = useState(null);
-	// const [navStyle, setNavStyle] = useState('text-gray');
 
-	// useEffect(() => {
-	// 	window.addEventListener('scroll', () => {
-	// 		if (window.scrollY > 50) {
-	// 			setSticky(true);
-	// 			setNavStyle('');
-	// 		} else {
-	// 			setSticky(false);
-	// 			setNavStyle('text-gray');
-	// 		}
-	// 	});
-	// }, []);
 	return (
 
 		<>
@@ -65,6 +51,10 @@ const Header = () => {
 							<Link to="/"> Home </Link>
 							<Link to="/services">
 								Services
+							</Link>
+
+							<Link to="/teams">
+								Teams
 							</Link>
 
 							<Link to="/dashboard/dashboard">

@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
-const AddPrice = () => {
+const AddPackage = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -159,4 +159,4 @@ const AddPrice = () => {
     );
 };
 
-export default AddPrice;
+export default AddPackage;
