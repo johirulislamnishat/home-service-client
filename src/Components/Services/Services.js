@@ -2,47 +2,47 @@ import React, { useEffect, useState } from 'react';
 import SwiperCore, { A11y, Autoplay, Navigation, Pagination, Scrollbar, Virtual } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';
-import Doctor from '../Doctor/Doctor';
-import './Doctors.css';
+import Service from './Service';
+import './Services.css';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, Virtual]);
 
-const Doctors = () => {
+const Services = () => {
 
-    const [doctors, setDoctors] = useState([]);
+    const [services, setServices] = useState([]);
     // const { isLoading } = useAuth();
 
     useEffect(() => {
-        const url = ('http://localhost:5000/doctors')
+        const url = ('http://localhost:5000/services')
         fetch(url)
             .then(res => res.json())
             // .then(data => console.log(data))
-            .then(data => setDoctors(data))
+            .then(data => setServices(data))
     }, [])
 
     return (
-        <section className="doctors">
+        <div className="services">
             <div className="container my-5">
-                <h1 className="text-center text-primary my-5">Our Doctors</h1>
-                <div className="doctors-view">
+                <h1 className="text-center text-primary my-5">Our Services</h1>
+                <div className="services-view">
                     <Swiper
                         spaceBetween={20}
                         slidesPerView={3}
                         centeredslide="true"
                         navigation
                         autoplay={true}
-                        key={'doctor.allAppointments && doctor.allAppointments.length'}
+                        key={'services._id'}
                     >
-                        {doctors.map((doctor, index) => (
+                        {services.map((service, index) => (
                             <SwiperSlide key={index}>
-                                <Doctor key={doctor.id} doctor={doctor} />
+                                <Service key={service.id} service={service} />
                             </SwiperSlide>
                         ))}
                     </Swiper>
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 
-export default Doctors;
+export default Services;

@@ -1,2 +1,2 @@
 <!-- Service -->
-serviceType,serviceName, serviceOverview,shortDes,serviceTitle,serviceSecondTitle,serviceLongDes, serviceRating,mainImage,secondImage,thirdImage
+serviceType,serviceName, serviceOverview,shortDes,serviceTitle,serviceSecondTitle,serviceLongDes,price, serviceRating,mainImage,secondImage,thirdImage

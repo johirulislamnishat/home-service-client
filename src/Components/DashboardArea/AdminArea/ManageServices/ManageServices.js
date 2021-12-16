@@ -6,24 +6,17 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import DoctorInfo from './DoctorInfo';
-import UpdateDoctor from './UpdateDoctor';
+import ServiceInfo from './ServiceInfo';
 
 const columns = [
 
-    { id: 'doctorName', label: 'Doctor Name', minWidth: 250, },
-    { id: 'phone', label: 'Phone Number', minWidth: 150, },
-    { id: 'email', label: 'Email', minWidth: 150, },
-    { id: 'designation', label: 'Designation', minWidth: 140, },
-    { id: 'department', label: 'Department', minWidth: 100, },
-    { id: 'education', label: 'Education', minWidth: 100, },
-    { id: 'hospital', label: 'Hospital', minWidth: 100, },
-    { id: 'price', label: 'Price', minWidth: 50, },
-    // { id: 'time', label: 'Time', minWidth: 150, },
-
-    { id: 'update', label: 'Update', },
-    { id: 'delete', label: 'Delete', }
+    { id: 'serviceName', label: 'Service Name', minWidth: 200, height: 100 },
+    { id: 'serviceType', label: 'Service Type', minWidth: 120, height: 100 },
+    { id: 'serviceTitle', label: 'Service Title', minWidth: 250, height: 100 },
+    { id: 'price', label: 'Service Price', minWidth: 140, height: 100 },
+    { id: 'serviceRating', label: 'Service Rating', minWidth: 140, height: 100 },
+    { id: 'update', label: 'Update', height: 100 },
+    { id: 'delete', label: 'Delete', height: 100 }
 
 ];
 const ManageServices = () => {
@@ -41,13 +34,13 @@ const ManageServices = () => {
         setPage(0);
     };
 
-    // doctors data
-    const [doctors, setDoctors] = useState([]);
+    // services data
+    const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/doctors')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
-            .then(data => setDoctors(data))
+            .then(data => setServices(data))
     }, [])
 
 
@@ -55,7 +48,7 @@ const ManageServices = () => {
     return (
         <>
             <Paper sx={{ width: '100%', overflow: 'hidden' }}>
-                <TableContainer sx={{ maxHeight: 550 }}>
+                <TableContainer sx={{ height: 550 }}>
                     <Table stickyHeader aria-label="sticky table">
                         <TableHead>
                             <TableRow>
@@ -72,15 +65,15 @@ const ManageServices = () => {
                         </TableHead>
 
                         <TableBody>
-                            {doctors
+                            {services
                                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                                .map((doctor) => {
+                                .map((service) => {
                                     return (
 
-                                        <DoctorInfo
-                                            key={doctor.id}
-                                            doctor={doctor}
-                                        ></DoctorInfo>
+                                        <ServiceInfo
+                                            key={service.id}
+                                            service={service}
+                                        ></ServiceInfo>
                                     );
                                 })}
                         </TableBody>
@@ -90,7 +83,7 @@ const ManageServices = () => {
                 <TablePagination
                     rowsPerPageOptions={[10, 25, 100]}
                     component="div"
-                    count={doctors.length}
+                    count={services.length}
                     rowsPerPage={rowsPerPage}
                     page={page}
                     onPageChange={handleChangePage}

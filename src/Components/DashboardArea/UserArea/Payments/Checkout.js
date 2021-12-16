@@ -2,11 +2,12 @@ import { CircularProgress } from '@mui/material';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import useAuth from '../../../Authentication/Hooks/useAuth';
+import useAuth from '../../../../Authentication/Hooks/useAuth';
 
-const Checkout = ({ payAppointment }) => {
 
-    const { price, patient_name, _id } = payAppointment;
+const Checkout = ({ payService }) => {
+
+    const { price, clientName, _id } = payService;
 
     const { user } = useAuth();
 
@@ -66,7 +67,7 @@ const Checkout = ({ payAppointment }) => {
                 payment_method: {
                     card: card,
                     billing_details: {
-                        name: patient_name,
+                        name: clientName,
                         email: user.email,
                     },
                 },
@@ -89,7 +90,7 @@ const Checkout = ({ payAppointment }) => {
                 transactionId: paymentIntent.client_secret.slice('_secret')[0]
             }
 
-            const url = `http://localhost:5000/appointments/${_id}`;
+            const url = `http://localhost:5000/bookedServices/${_id}`;
             fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -103,15 +104,17 @@ const Checkout = ({ payAppointment }) => {
     }
     return (
         <div>
-            <form onSubmit={handleOnSubmit}>
+            <form style={{ marginTop: 30 }} onSubmit={handleOnSubmit}>
                 <CardElement
                     options={{
                         style: {
+
                             base: {
-                                fontSize: '16px',
-                                color: '#424770',
+
+                                fontSize: '18px',
+                                color: '#052944',
                                 '::placeholder': {
-                                    color: '#aab7c4',
+                                    color: '#051d2f91',
                                 },
                             },
                             invalid: {
@@ -122,7 +125,7 @@ const Checkout = ({ payAppointment }) => {
                 />
                 {
                     processing ? (<CircularProgress />) : (
-                        <button type="submit" disabled={!stripe || success}>
+                        <button className='btn-main py-2 px-5 mt-5' type="submit" disabled={!stripe || success}>
                             Pay
                         </button>)
                 }
@@ -136,7 +139,9 @@ const Checkout = ({ payAppointment }) => {
                 success && <p style={{ color: 'green' }}>{success}</p>
             }
 
-            <Link to='/dashboard/cardInfo'>See Card Details</Link>
+            <button style={{ marginTop: 20 }} className='btn-main py-2 px-4'>
+                <Link className='btn-main py-2 px-4' to='/dashboard/cardInfo'>See Card Details</Link>
+            </button>
         </div>
     );
 };

@@ -59,7 +59,7 @@ const Review = () => {
                     </div>
 
 
-                    <input class="btn btn-primary" type="submit" value="Submit" />
+                    <input class="btn-main py-2 px-3 mt-4" type="submit" value="Submit" />
                 </form>
             </div>
 

@@ -23,7 +23,7 @@ const Testimonials = () => {
 		<section className="testimonials my-5 py-4">
 			<div className="container">
 				<div className="section-header">
-					<h5 className="text-primary text-uppercase">FeedBack</h5>
+					<h5 className="text-primary text-uppercase text-center">FeedBack</h5>
 					<h1 className="style-color ">
 						What Our Clients <br /> Says
 					</h1>

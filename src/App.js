@@ -2,7 +2,6 @@ import './App.css';
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './Components/Home/Home/Home';
-import Appointment from './Components/Appointment/Appointment/Appointment';
 import Login from './Authentication/Login/Login';
 import Registration from './Authentication/Registration/Registration';
 import Sneackbar from './Components/Sneackbar';
@@ -11,6 +10,7 @@ import Contact from './Components/SinglePages/ContactUs';
 import Dashboard from './Components/DashboardArea/Dashboard';
 import AuthProvider from './Authentication/Context/AuthProvider';
 import PrivateRoute from './Authentication/PrivateRoute/PrivateRoute';
+import ServicesPage from './Components/ServiceBooking/ServicesPage';
 
 function App() {
 
@@ -45,8 +45,8 @@ function App() {
               <Sneackbar />
             </Route>
 
-            <PrivateRoute path="/appointment">
-              <Appointment />
+            <PrivateRoute path="/services">
+              <ServicesPage />
             </PrivateRoute>
 
             <PrivateRoute path="/dashboard">

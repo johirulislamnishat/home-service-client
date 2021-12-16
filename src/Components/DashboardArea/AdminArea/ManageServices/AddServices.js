@@ -108,6 +108,17 @@ const AddServices = () => {
                     </div>
 
                     <div className="form-group col-6">
+                        <label htmlFor="exampleInputPassword1">Service Price</label>
+                        <input
+                            {...register("price")}
+                            type="number"
+                            className="form-control"
+                            placeholder="Enter Service Price"
+                            required={true}
+                        />
+                    </div>
+
+                    <div className="form-group col-6">
                         <label htmlFor="exampleInputPassword1">Service Rating</label>
                         <input
                             {...register("serviceRating")}

@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import { Button, TextField } from '@mui/material';
-import Sneackbar from '../../Sneackbar';
+import { TextField } from '@mui/material';
+import Sneackbar from '../../../Sneackbar';
 
 
-const UpdateDoctor = ({ open, handleClose, doctor }) => {
+const UpdateService = ({ open, handleClose, service }) => {
 
     // console.log(doctor)
-    const { img, name, phone, email, designation, department, education, hospital, price } = doctor;
+    const { serviceName, serviceType, serviceTitle, serviceOverview, serviceRating } = service;
     const [openSneackBar, setOpenSneackBar] = useState(false);
 
     const handleOnSubmit = e => {
@@ -87,11 +87,11 @@ const UpdateDoctor = ({ open, handleClose, doctor }) => {
             >
                 <Box sx={style}>
                     <Typography marginBottom='20px' variant="h6" textAlign='center'>
-                        Update Doctor Info
+                        Update Service Info
                     </Typography>
 
-                    <h4 className="text-primary text-center">{name}</h4>
-                    <h5 className="text-center style-color">{designation}</h5>
+                    <h4 className="text-primary text-center">{serviceName}</h4>
+                    <h5 className="text-center style-color">{serviceType}</h5>
 
                     <form onSubmit={handleOnSubmit} style={{ marginTop: 4, height: '350px', overflowY: 'scroll', padding: 10 }} >
 
@@ -99,7 +99,7 @@ const UpdateDoctor = ({ open, handleClose, doctor }) => {
                             id="outlined-disabled"
                             sx={{ width: '100%', mb: 2 }}
                             label="Doctor Image Link"
-                            defaultValue={img}
+                            defaultValue={serviceTitle}
                         />
 
                         <TextField
@@ -107,7 +107,7 @@ const UpdateDoctor = ({ open, handleClose, doctor }) => {
                             id="outlined-disabled"
                             sx={{ width: '100%', mb: 2 }}
                             label="Doctor Name"
-                            defaultValue={name}
+                            defaultValue={serviceOverview}
                         />
 
                         <TextField
@@ -115,49 +115,7 @@ const UpdateDoctor = ({ open, handleClose, doctor }) => {
                             id="outlined-disabled"
                             sx={{ width: '100%', mb: 2 }}
                             label="Phone Number"
-                            defaultValue={phone}
-                        />
-
-                        <TextField id="outlined-disabled" sx={{ width: '100%', mb: 2 }}
-                            label="Email"
-                            defaultValue={email}
-                        />
-
-                        <TextField
-
-                            id="outlined-disabled"
-                            sx={{ width: '100%', mb: 2 }}
-                            label="Designation"
-                            defaultValue={designation}
-                        />
-                        <TextField
-
-                            id="outlined-disabled"
-                            sx={{ width: '100%', mb: 2 }}
-                            label="Department"
-                            defaultValue={department}
-                        />
-                        <TextField
-
-                            id="outlined-disabled"
-                            sx={{ width: '100%', mb: 2 }}
-                            label="Education"
-                            defaultValue={education}
-                        />
-                        <TextField
-
-                            id="outlined-disabled"
-                            sx={{ width: '100%', mb: 2 }}
-                            label="Hospital"
-                            defaultValue={hospital}
-                        />
-
-                        <TextField
-                            type='number'
-                            id="outlined-disabled"
-                            sx={{ width: '100%', mb: 2 }}
-                            label="Price"
-                            defaultValue={price}
+                            defaultValue={serviceRating}
                         />
 
                         <input class="btn btn-primary my-2" type="submit" value="Confirm" />
@@ -173,4 +131,4 @@ const UpdateDoctor = ({ open, handleClose, doctor }) => {
     );
 };
 
-export default UpdateDoctor;
+export default UpdateService;

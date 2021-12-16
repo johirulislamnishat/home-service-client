@@ -1,38 +1,45 @@
-.doctors-view {
+.services-view {
 	margin-left: -10px !important;
 	margin-right: -10px !important;
+}
+
+.services{
+	background-color: #2095fc07;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 20px;
 }
 
 .swiper-wrapper {
 	width: 350px !important;
 }
-.single-doctor {
+.single-service {
 	border-radius: 10px;
 	box-shadow: 1px 2px 9px -3px rgba(99, 99, 99, 0.45);
 	margin-bottom: 10px;
 }
-.doctor-description {
+.service-description {
 	padding: 10px 10px 20px 10px;
 }
 
-.doctor-image {
+.service-image {
 	border-radius: 10px 10px 0px 0px;
 	width: 100%;
 	height: 250px;
 }
 
-.doctor-category {
-	color: rgb(21, 209, 200);
+.service-category {
+	color: #2097fc;
 	font-weight: 500;
 	font-size: 14px;
 	letter-spacing: 0.01rem;
 }
 
-.doctor-name {
+.service-name {
 	color: #3a4256;
 }
 
-.doctor-education {
+.service-education {
 	font-size: 12px;
 	line-height: 1rem;
 	letter-spacing: 0.01rem;
@@ -41,21 +48,21 @@
 .collapse-btn {
 	font-size: 13px;
 	margin-left: 5px;
-	color: rgb(21, 209, 200);
+	color: #2097fc;
 	cursor: pointer;
 }
 .department {
 	font-size: 15px;
 }
 
-.hospital {
+.smallText {
 	font-size: 14px;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
 	top: 200px !important;
-	color: rgb(21, 209, 200) !important;
+	color: #2097fc !important;
 }
 
 @media (max-width: 700px) {

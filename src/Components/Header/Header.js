@@ -63,8 +63,8 @@ const Header = () => {
 						<nav className="Nav">
 
 							<Link to="/"> Home </Link>
-							<Link to="/appointment">
-								Make Appointment
+							<Link to="/services">
+								Services
 							</Link>
 
 							<Link to="/dashboard/dashboard">
@@ -84,7 +84,7 @@ const Header = () => {
 						</nav>
 					</CSSTransition>
 					<button onClick={toggleNav} className="Burger">
-						🍔
+						<i class="fas fa-bars"></i>
 					</button>
 				</div>
 			</div>

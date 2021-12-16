@@ -4,19 +4,18 @@ import DashboardAdmin from './AdminArea/DashboardAdmin';
 import Patients from './AdminArea/ManagePatients';
 import Appointment from './AdminArea/Appointment';
 import DashboardUser from './UserArea/DashboardUser';
-import MyAppointment from './UserArea/MyAppointment';
 import Review from './UserArea/Review';
 import AddAdmin from './AdminArea/AddAdmin';
-import Payment from './UserArea/Payment';
-import CardInfo from './UserArea/CardInfo';
+import Payment from './UserArea/Payments/Payment';
+import CardInfo from './UserArea/Payments/CardInfo';
 import SendMeetLink from './AdminArea/SendMeetLink';
-import ManageServices from './AdminArea/ManageServices';
-import AddServices from './AdminArea/AddServices';
+import ManageServices from './AdminArea/ManageServices/ManageServices';
+import AddServices from './AdminArea/ManageServices/AddServices';
+import MybookedServices from './UserArea/MyBookedServices/MyBookedServices';
 
 
 const DashboardContent = () => {
     let { path } = useRouteMatch();
-
 
     return (
         <div>
@@ -55,11 +54,11 @@ const DashboardContent = () => {
                     <DashboardUser />
                 </Route>
 
-                <Route path={`${path}/my-appointment`}>
-                    <MyAppointment />
+                <Route path={`${path}/my-booked-service`}>
+                    <MybookedServices />
                 </Route>
 
-                <Route path={`${path}/payment/:appointmentId`}>
+                <Route path={`${path}/payment/:serviceId`}>
                     <Payment />
                 </Route>
 
@@ -67,9 +66,6 @@ const DashboardContent = () => {
                     <CardInfo />
                 </Route>
 
-                {/* <Route path={`${path}/my-prescriptions`}>
-                    <MyPrescription />
-                </Route> */}
 
                 <Route path={`${path}/review`}>
                     <Review />

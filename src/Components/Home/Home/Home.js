@@ -6,9 +6,9 @@ import Features from '../../Features/Features';
 import Testimonials from '../../Testimonials/Testimonials';
 import FeaturedService from '../../FeaturedService/FeaturedService';
 import Blogs from '../../Blogs/Blogs';
-import Doctors from '../../Doctors/Doctors';
 import TopBanner from '../TopBar/TopBanner';
 import TopInfographics from '../TopInfographics/TopInfographics';
+import Services from '../../Services/Services';
 
 const Home = () => {
     return (
@@ -19,7 +19,7 @@ const Home = () => {
                 <Header />
                 <TopBanner />
                 <TopInfographics />
-                <Doctors />
+                <Services />
                 <InfographicMiddle />
                 <Features />
                 <Testimonials />
