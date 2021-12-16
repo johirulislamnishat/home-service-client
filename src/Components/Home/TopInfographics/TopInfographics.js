@@ -29,7 +29,7 @@ const infographicsTop = [
 
 const TopInfographics = () => {
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1 }} style={{ marginTop: 40 }}>
             <Container>
                 <Typography sx={{ color: "#2097fc", mb: 2, mt: 10, textAlign: 'center' }} variant="h6" component="div">
                     OUR SERVICES

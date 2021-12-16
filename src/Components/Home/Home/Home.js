@@ -9,6 +9,7 @@ import Blogs from '../../Blogs/Blogs';
 import TopBanner from '../TopBar/TopBanner';
 import TopInfographics from '../TopInfographics/TopInfographics';
 import Services from '../../Services/Services';
+import Engineers from '../Engineers/Engineers';
 
 const Home = () => {
     return (
@@ -22,6 +23,7 @@ const Home = () => {
                 <Services />
                 <InfographicMiddle />
                 <Features />
+                <Engineers />
                 <Testimonials />
                 <FeaturedService />
                 <Blogs />

@@ -166,6 +166,13 @@ function Dashboard() {
                         </Link>
                     </ListItem>
 
+                    {/* add enginners */}
+                    <ListItem button>
+                        <Link to={`${url}/add-engineers`}>
+                            <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faUserPlus} /> <span>Add Engineers</span>
+                        </Link>
+                    </ListItem>
+
                     <ListItem button>
                         <Link to={`${url}/manage-services`}>
                             <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faArtstation} /> <span>Manage Services</span>
@@ -200,13 +207,13 @@ function Dashboard() {
                     </ListItem>
 
                 </List>
-                {/* } */}
+
 
             </div>
 
             <div>
                 <ListItem button style={{ fontSize: 16, marginTop: 10 }}>
-                    <Link onClick={logOut} to="/">
+                    <Link className='btn-main py-2 px-3' onClick={logOut} to="/">
                         <FontAwesomeIcon style={{ width: 17, marginRight: 5 }} icon={faSignOutAlt} /> <span>Logout</span>
                     </Link>
                 </ListItem>

@@ -12,7 +12,7 @@ const AddEngineers = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        axios.post('http://localhost:5000/services', data)
+        axios.post('http://localhost:5000/engineers', data)
             .then(res => {
                 // console.log(res);
                 if (res.data.insertedId) {
@@ -28,130 +28,58 @@ const AddEngineers = () => {
         <div className="container-fluid row" style={{ backgroundColor: '#F4FDFB' }}>
 
             <div id="responsive-dashboard" className="col-md-10 p-4 serviceForm mx-auto" style={{ backgroundColor: '#F4FDFB' }}>
-                <h5 className="text-brand mb-4">Add a Service</h5>
+                <h5 className="text-brand mb-4">Add Engineer</h5>
                 <form onSubmit={handleSubmit(onSubmit)}>
 
-                    {/* service type  */}
+                    {/* Engineer Image  */}
                     <div className="form-group col-6">
-                        <label htmlFor="exampleInputEmail1">Service Type</label>
+                        <label htmlFor="exampleInputEmail1">Engineer Image</label>
                         <input
-                            {...register("serviceType")}
+                            {...register("engineerImage")}
                             type="text"
                             className="form-control"
-                            placeholder="Enter Type Of Service"
+                            placeholder="Enter Engineer Image Url"
                             required={true}
                         />
                     </div>
 
+                    {/* engineer name  */}
                     <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Name Of Service</label>
+                        <label htmlFor="exampleInputEmail1">Engineer Name</label>
                         <input
-                            {...register("name")}
+                            {...register("engineerName")}
                             type="text"
                             className="form-control"
-                            placeholder="Enter Doctor Name"
+                            placeholder="Enter Engineer Name"
                             required={true}
                         />
                     </div>
 
+                    {/* short description */}
                     <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Phone Number</label>
+                        <label htmlFor="exampleInputPassword1">Write Short Description</label>
                         <input
-                            {...register("phone")}
+                            {...register("shortDes")}
                             type="text"
                             className="form-control"
-                            placeholder="Enter Doctor Number"
+                            placeholder="Enter Short Description"
                             required={true}
                         />
                     </div>
 
+                    {/* long description  */}
                     <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Email</label>
+                        <label htmlFor="exampleInputPassword1">Long Description</label>
                         <input
-                            {...register("email")}
-                            type="email"
+                            {...register("longDes")}
+                            type="text"
                             className="form-control"
-                            placeholder="Enter Doctor Email"
+                            placeholder="Write Long Description"
                             required={true}
                         />
                     </div>
 
-                    <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Education</label>
-                        <textarea
-                            {...register("education")}
-                            type="text"
-                            className="form-control"
-                            placeholder="Enter Doctor Education"
-                            required={true}
-                        />
-                    </div>
-                    <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Designation</label>
-                        <input
-                            {...register("designation")}
-                            type="text"
-                            className="form-control"
-                            placeholder="Enter Doctor Designation"
-                            required={true}
-                        />
-                    </div>
-                    <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Department</label>
-                        <input
-                            {...register("department")}
-                            type="text"
-                            className="form-control"
-                            placeholder="Enter Doctor Department"
-                            required={true}
-                        />
-                    </div>
-
-                    <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Hospital</label>
-                        <input
-                            {...register("hospital")}
-                            type="text"
-                            className="form-control"
-                            placeholder="Enter Doctor Hospital"
-                            required={true}
-                        />
-                    </div>
-
-                    <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Price</label>
-                        <input
-                            {...register("price")}
-                            type="number"
-                            className="form-control"
-                            placeholder="Enter Price"
-                            required={true}
-                        />
-                    </div>
-
-                    <div className="form-group col-6 pt-2">
-                        <label htmlFor="exampleInputPassword1">
-                            Upload a image in
-                            <a
-                                href="https://imgur.com/"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                className="text-black px-2"
-                            >
-                                <strong>imgur</strong>
-                            </a>
-                            & Paste the image link here
-                        </label>
-                        <input
-                            {...register("img")}
-                            type="text"
-                            className="form-control"
-                            placeholder="Upload Picture in imgur and paste the img link here"
-                            required={true}
-                        />
-                    </div>
-
-                    <button type="submit" className="btn btn-primary mt-2 ml-3">
+                    <button type="submit" className="btn-main py-2 px-3 mt-3 ml-3">
                         Submit
                     </button>
                 </form>

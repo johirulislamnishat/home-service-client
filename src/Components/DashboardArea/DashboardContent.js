@@ -12,6 +12,7 @@ import SendMeetLink from './AdminArea/SendMeetLink';
 import ManageServices from './AdminArea/ManageServices/ManageServices';
 import AddServices from './AdminArea/ManageServices/AddServices';
 import MybookedServices from './UserArea/MyBookedServices/MyBookedServices';
+import AddEngineers from './AdminArea/AddEngineers';
 
 
 const DashboardContent = () => {
@@ -35,6 +36,10 @@ const DashboardContent = () => {
 
                 <Route path={`${path}/add-services`}>
                     <AddServices />
+                </Route>
+
+                <Route path={`${path}/add-engineers`}>
+                    <AddEngineers />
                 </Route>
 
                 <Route path={`${path}/manage-services`}>

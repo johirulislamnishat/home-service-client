@@ -11,6 +11,7 @@ import Dashboard from './Components/DashboardArea/Dashboard';
 import AuthProvider from './Authentication/Context/AuthProvider';
 import PrivateRoute from './Authentication/PrivateRoute/PrivateRoute';
 import ServicesPage from './Components/ServiceBooking/ServicesPage';
+import Teams from './Components/Teams/Teams';
 
 function App() {
 
@@ -35,6 +36,10 @@ function App() {
 
             <Route path="/contact">
               <Contact />
+            </Route>
+
+            <Route path="/teams">
+              <Teams />
             </Route>
 
             <Route path="/login">

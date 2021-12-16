@@ -20,16 +20,17 @@ const AddAdmin = () => {
                 if (res.data.upsertCount) {
                     // console.log(data);
                     setSuccess(true);
-
+                    // alert('Success');
+                    // reset();
                 }
             })
 
-            .then(res => {
-                if (res.success) {
-                    alert('Success');
-                    reset();
-                }
-            })
+        // .then(res => {
+        //     if (res.success) {
+        //         alert('Success');
+        //         reset();
+        //     }
+        // })
 
     };
     return (
