@@ -3,7 +3,6 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import useAuth from '../Hooks/useAuth';
-import logo from '../../images/logo.png';
 import './Login.css';
 
 const Login = () => {
