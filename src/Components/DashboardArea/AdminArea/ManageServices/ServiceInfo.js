@@ -1,7 +1,5 @@
-import TableCell from '@mui/material/TableCell';
 import React, { useState } from 'react';
-
-import TableRow from '@mui/material/TableRow';
+import Rating from 'react-rating';
 import UpdateService from './UpdateService';
 
 const ServiceInfo = ({ service }) => {
@@ -9,9 +7,9 @@ const ServiceInfo = ({ service }) => {
     const { mainImage, serviceName, serviceType, serviceTitle, price, serviceRating } = service;
 
     //modal 
-    const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    // const [open, setOpen] = useState(false);
+    // const handleOpen = () => setOpen(true);
+    // const handleClose = () => setOpen(false);
 
     const [deleteService, setDeleteService] = useState([]);
 
@@ -60,7 +58,12 @@ const ServiceInfo = ({ service }) => {
 
                 {/* rating  */}
                 <td className="p-2 whitespace-nowrap">
-                    <div className="text-lg text-left">{serviceRating}</div>
+                    <Rating
+                        initialRating={serviceRating}
+                        readonly
+                        emptySymbol='far fa-star text-warning'
+                        fullSymbol='fas fa-star text-warning'
+                    />
                 </td>
 
                 {/* update  */}
@@ -82,11 +85,11 @@ const ServiceInfo = ({ service }) => {
 
             </TableRow> */}
 
-            <UpdateService
+            {/* <UpdateService
                 open={open}
                 handleClose={handleClose}
                 service={service}
-            ></UpdateService>
+            ></UpdateService> */}
         </>
     );
 };

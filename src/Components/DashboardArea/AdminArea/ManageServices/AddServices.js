@@ -24,185 +24,187 @@ const AddServices = () => {
     };
 
     return (
-        <div className="container-fluid row" style={{ backgroundColor: '#F4FDFB' }}>
 
-            <div id="responsive-dashboard" className="col-md-10 p-4 serviceForm mx-auto" style={{ backgroundColor: '#F4FDFB' }}>
-                <h5 className="text-brand mb-4">Add a Service</h5>
-                <form onSubmit={handleSubmit(onSubmit)}>
+        <>
 
-                    {/* service type  */}
-                    <div className="form-group col-6">
-                        <label htmlFor="exampleInputEmail1">Service Type</label>
-                        <input
-                            {...register("serviceType")}
-                            type="text"
-                            className="form-control"
-                            placeholder="Enter Type Of Service"
-                            required={true}
-                        />
+            <div className="bg-indigo-100 w-full">
+                <div className="container flex items-center justify-center flex-1 h-full mx-auto">
+                    <div className="px-2 md:px-0 my-10 md:my-24 w-full max-w-lg">
+
+                        <div className="flex flex-col w-full max-w-md px-4 py-8 bg-white rounded-lg shadow dark:bg-gray-800 sm:px-6 md:px-8 lg:px-10">
+                            <div className="self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white">
+                                Add a Service
+                            </div>
+
+                            <div className="mt-8">
+
+                                {/* form start  */}
+                                <form onSubmit={handleSubmit(onSubmit)}>
+
+                                    {/* Service Type  */}
+                                    <div className="flex flex-col mb-2">
+                                        <div>
+                                            <span>
+                                                Service Type
+                                            </span>
+                                            <input
+                                                {...register("serviceType")} placeholder="Enter Type Of Service"
+                                                required={true}
+                                                type="text" className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" />
+                                        </div>
+                                    </div>
+
+                                    {/* service name  */}
+                                    <div className="flex flex-col mb-6">
+                                        <div>
+                                            <span>
+                                                Service Name
+                                            </span>
+                                            <input {...register("serviceName")}
+                                                type="text"
+
+                                                placeholder="Enter Service Name"
+                                                required={true} className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" />
+                                        </div>
+                                    </div>
+
+                                    {/* Service Title  */}
+                                    <div className="flex flex-col mb-6">
+                                        <div>
+                                            <span>
+                                                Service Title
+                                            </span>
+                                            <input {...register("serviceTitle")}
+                                                type="text"
+
+                                                placeholder="Write Service Title"
+                                                required={true} className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" />
+                                        </div>
+                                    </div>
+
+                                    {/* Another Service Title  */}
+                                    <div className="flex flex-col mb-6">
+                                        <div>
+                                            <span>
+                                                Another Service Title                 </span>
+                                            <input {...register("serviceSecondTitle")}
+                                                type="text"
+
+                                                placeholder="Write Another Service Title"
+                                                required={true} className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" />
+                                        </div>
+                                    </div>
+
+                                    {/* Short Description  */}
+                                    <div className="flex flex-col mb-6">
+                                        <div>
+                                            <span>
+                                                Short Description                                            </span>
+                                            <textarea {...register("shortDes")}
+                                                type="text"
+
+                                                placeholder="Write Short Description"
+                                                required={true} className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" />
+                                        </div>
+                                    </div>
+
+                                    {/* Long Description  */}
+                                    <div className="flex flex-col mb-6">
+                                        <div>
+                                            <span>
+                                                Long Description                                            </span>
+                                            <textarea {...register("serviceLongDes")}
+                                                type="text"
+
+                                                placeholder="Write Long Description"
+                                                required={true} className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" />
+                                        </div>
+                                    </div>
+
+                                    {/* price  */}
+                                    <div className="flex flex-col mb-6">
+                                        <div>
+                                            <span>
+                                                Service Price
+                                            </span>
+                                            <input {...register("price")}
+                                                type="number"
+                                                placeholder="Enter Service Price"
+                                                required={true} className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" />
+                                        </div>
+                                    </div>
+
+                                    {/* Rating  */}
+                                    <div className="flex flex-col mb-6">
+                                        <div>
+                                            <span>
+                                                Service Rating
+                                            </span>
+                                            <input {...register("serviceRating")}
+                                                type="number"
+                                                placeholder="Enter Service Rating"
+                                                required={true} className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" />
+                                        </div>
+                                    </div>
+
+                                    {/* main image  */}
+                                    <div className="flex flex-col mb-6">
+                                        <div>
+                                            <span>
+                                                Upload Main Image
+                                            </span>
+                                            <input {...register("mainImage")}
+                                                type="text"
+
+                                                placeholder="Paste main image link here"
+                                                required={true} className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" />
+                                        </div>
+                                    </div>
+
+                                    {/* second image  */}
+                                    <div className="flex flex-col mb-6">
+                                        <div>
+                                            <span>
+                                                Upload Another Image
+                                            </span>
+                                            <input {...register("secondImage")}
+                                                type="text"
+
+                                                placeholder="Paste second image link here"
+                                                required={true} className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" />
+                                        </div>
+                                    </div>
+
+                                    {/* third image  */}
+                                    <div className="flex flex-col mb-6">
+                                        <div>
+                                            <span>
+                                                Upload Another Image
+                                            </span>
+                                            <input {...register("thirdImage")}
+                                                type="text"
+
+                                                placeholder="Paste third image link here"
+                                                required={true}
+                                                className=" rounded-r-lg flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" />
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" className="py-2 px-4  btn-dash hover:bg-blue-400 focus:ring-purple-500 focus:ring-offset-purple-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+                                        Add Service
+                                    </button>
+                                </form>
+
+
+                            </div>
+                        </div>
+
                     </div>
-
-                    <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Name Of Service</label>
-                        <input
-                            {...register("serviceName")}
-                            type="text"
-                            className="form-control"
-                            placeholder="Enter Service Name"
-                            required={true}
-                        />
-                    </div>
-
-                    <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Service Title</label>
-                        <input
-                            {...register("serviceTitle")}
-                            type="text"
-                            className="form-control"
-                            placeholder="Write Service Title"
-                            required={true}
-                        />
-                    </div>
-                    <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Another Service Title</label>
-                        <input
-                            {...register("serviceSecondTitle")}
-                            type="text"
-                            className="form-control"
-                            placeholder="Write Another Service Title"
-                            required={true}
-                        />
-                    </div>
-
-                    <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Short Description</label>
-                        <textarea
-                            {...register("shortDes")}
-                            type="text"
-                            className="form-control"
-                            placeholder="Write Short Description"
-                            required={true}
-                        />
-                    </div>
-
-                    <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Service Overview</label>
-                        <textarea
-                            {...register("serviceOverview")}
-                            type="text"
-                            className="form-control"
-                            placeholder="Write Service Overview"
-                            required={true}
-                        />
-                    </div>
-
-                    <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Service Long Description</label>
-                        <textarea
-                            {...register("serviceLongDes")}
-                            type="text"
-                            className="form-control"
-                            placeholder="Write Service Description"
-                            required={true}
-                        />
-                    </div>
-
-                    <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Service Price</label>
-                        <input
-                            {...register("price")}
-                            type="number"
-                            className="form-control"
-                            placeholder="Enter Service Price"
-                            required={true}
-                        />
-                    </div>
-
-                    <div className="form-group col-6">
-                        <label htmlFor="exampleInputPassword1">Service Rating</label>
-                        <input
-                            {...register("serviceRating")}
-                            type="number"
-                            className="form-control"
-                            placeholder="Enter Service Rating"
-                            required={true}
-                        />
-                    </div>
-
-                    <div className="form-group col-6 pt-2">
-                        <label htmlFor="exampleInputPassword1">
-                            Upload main image
-                            <a
-                                href="https://imgur.com/"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                className="text-black px-2"
-                            >
-                                <strong>imgur</strong>
-                            </a>
-                            & Paste the image link here
-                        </label>
-                        <input
-                            {...register("mainImage")}
-                            type="text"
-                            className="form-control"
-                            placeholder="Paste main image link here"
-                            required={true}
-                        />
-                    </div>
-
-                    {/* second image  */}
-                    <div className="form-group col-6 pt-2">
-                        <label htmlFor="exampleInputPassword1">
-                            Upload another image
-                            <a
-                                href="https://imgur.com/"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                className="text-black px-2"
-                            >
-                                <strong>imgur</strong>
-                            </a>
-                            & Paste the image link here
-                        </label>
-                        <input
-                            {...register("secondImage")}
-                            type="text"
-                            className="form-control"
-                            placeholder="Paste second image link here"
-                            required={true}
-                        />
-                    </div>
-
-                    {/* third image  */}
-                    <div className="form-group col-6 pt-2">
-                        <label htmlFor="exampleInputPassword1">
-                            Upload another image
-                            <a
-                                href="https://imgur.com/"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                className="text-black px-2"
-                            >
-                                <strong>imgur</strong>
-                            </a>
-                            & Paste the image link here
-                        </label>
-                        <input
-                            {...register("thirdImage")}
-                            type="text"
-                            className="form-control"
-                            placeholder="Paste third image link here"
-                            required={true}
-                        />
-                    </div>
-
-                    <button type="submit" className="btn-main py-2 px-4 mt-4 ml-3">
-                        Submit
-                    </button>
-                </form>
+                </div>
             </div>
-        </div>
+
+
+        </>
     );
 };
 

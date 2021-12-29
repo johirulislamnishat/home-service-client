@@ -1,43 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Paper, TableContainer } from '@mui/material';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableHead from '@mui/material/TableHead';
-import TablePagination from '@mui/material/TablePagination';
-import TableRow from '@mui/material/TableRow';
+import Rating from 'react-rating';
 import useAuth from '../../../../Authentication/Hooks/useAuth';
 import { Link } from 'react-router-dom';
-
-const columns = [
-
-    { id: 'clientName', label: 'Name', minWidth: 200, },
-    { id: 'serviceName', label: 'Service Name', minWidth: 200, },
-    { id: 'serviceType', label: 'Service Type', minWidth: 120, },
-    { id: 'price', label: 'Service Price', minWidth: 140, },
-    { id: 'serviceRating', label: 'Service Rating', minWidth: 140, },
-    { id: 'status', label: 'Status', },
-    { id: 'payment', label: 'Payment', minWidth: 130 },
-    { id: 'delete', label: 'Delete', }
-
-];
 
 const MybookedServices = () => {
 
     const { user } = useAuth();
     // console.log(user);
-
-    const [page, setPage] = useState(0);
-    const [rowsPerPage, setRowsPerPage] = useState(15);
-
-    const handleChangePage = (event, newPage) => {
-        setPage(newPage);
-    };
-
-    const handleChangeRowsPerPage = (event) => {
-        setRowsPerPage(+event.target.value);
-        setPage(0);
-    };
 
     const [bookedServices, setBookedServices] = useState([]);
     // console.log(bookedServices)
@@ -85,65 +54,115 @@ const MybookedServices = () => {
                         <h1>Hello!!! {user.displayName}</h1>
                         <h1>Please book Book A Service</h1>
                     </div>
-                )
-                    :
-                    (
-                        <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+                ) : (
+                    <div className="col-span-full xl:col-span-6 bg-white shadow-lg rounded-sm border border-gray-200">
+                        <header className="px-3 py-3 border-b border-gray-100">
+                            <h5 className="font-semibold text-gray-800">My Booking Services</h5>
+                        </header>
+                        <div className="p-3">
 
-                            <TableContainer sx={{ maxHeight: 550 }}>
-                                <Table stickyHeader aria-label="sticky table">
-                                    <TableHead>
-                                        <TableRow>
-                                            {columns.map((column) => (
-                                                <TableCell
-                                                    key={column.id}
-                                                    align={column.align}
-                                                    style={{ minWidth: column.minWidth }}
-                                                >
-                                                    {column.label}
-                                                </TableCell>
-                                            ))}
-                                        </TableRow>
-                                    </TableHead>
+                            {/* Table */}
+                            <div className="overflow-x-auto">
+                                <table className="table-auto w-full">
+                                    {/* Table header */}
+                                    <thead className="text-xs font-semibold uppercase text-gray-800 bg-indigo-50">
+                                        <tr>
+                                            <th className="p-2 whitespace-nowrap">
+                                                <div className="font-semibold text-left">Service Name</div>
+                                            </th>
+                                            <th className="p-2 whitespace-nowrap">
+                                                <div className="font-semibold text-left">Your Name</div>
+                                            </th>                                     <th className="p-2 whitespace-nowrap">
+                                                <div className="font-semibold text-left">Service Type</div>
+                                            </th>
 
-                                    <TableBody>
-                                        {bookedServices
-                                            .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                                            .map((bookedService) => {
+                                            <th className="p-2 whitespace-nowrap">
+                                                <div className="font-semibold text-left">Service Price</div>
+                                            </th>
+
+                                            {/* rating  */}
+                                            <th className="p-2 whitespace-nowrap">
+                                                <div className="font-semibold text-left">Service Rating</div>
+                                            </th>
+
+                                            <th className="p-2 whitespace-nowrap">
+                                                <div className="font-semibold text-left">Payment</div>
+                                            </th>
+
+                                            {/* update button  */}
+                                            {/* <th className="p-2 whitespace-nowrap">
+                                        <div className="font-semibold text-left">Update</div>
+                                    </th> */}
+
+                                            {/* delete button */}
+                                            <th className="p-2 whitespace-nowrap">
+                                                <div className="font-semibold text-left">Delete</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    {/* Table body */}
+                                    <tbody className="text-sm divide-y divide-gray-100">
+                                        {
+                                            bookedServices.map(bookedService => {
                                                 return (
-                                                    <TableRow hover role="checkbox" tabIndex={-1}>
 
-                                                        <TableCell >{bookedService.clientName}</TableCell>
-                                                        <TableCell >{bookedService.serviceName}</TableCell>
-                                                        <TableCell >{bookedService.serviceType}</TableCell>
-                                                        <TableCell> {bookedService.price} </TableCell>
-                                                        <TableCell> {bookedService.serviceRating} </TableCell>
+                                                    <tr key={bookedService._id}>
+                                                        <td className="p-2 whitespace-nowrap">
+                                                            <div className="flex items-center">
+                                                                <div className="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3">
+                                                                    <img className='rounded-md' src={bookedService.mainImage} width="40" height="40" alt={bookedService.serviceName} />
+                                                                </div>
+                                                                <div className="font-medium text-gray-800">{bookedService.serviceName}</div>
+                                                            </div>
+                                                        </td>
+                                                        <td className="p-2 whitespace-nowrap">
+                                                            <div className="text-left">{bookedService.clientName}</div>
+                                                        </td>
 
-                                                        <TableCell style={{ fontSize: 17 }}> {bookedService.status} </TableCell>
-                                                        <TableCell> {bookedService.payment ? <div style={{ fontSize: 17 }}>Paid</div> : (
-                                                            <Link className='btn-main py-1 px-2' style={{ fontSize: 17 }} to={`/dashboard/payment/${bookedService._id}`}> Pay Now </Link>
-                                                        )} </TableCell>
+                                                        <td className="p-2 whitespace-nowrap">
+                                                            <div className="text-left">{bookedService.serviceType}</div>
+                                                        </td>
+                                                        <td className="p-2 whitespace-nowrap">
+                                                            <div className="text-left font-medium text-green-500">$ {bookedService.price}</div>
+                                                        </td>
 
-                                                        {/* delete button*/}
-                                                        <TableCell style={{ fontSize: 23 }} > <button className='bg-transparent border-0' onClick={() => handleDeleteBookedService(bookedService._id)}><i style={{ cursor: 'pointer' }} className="far fa-trash-alt text-danger"></i></button> </TableCell>
+                                                        {/* rating  */}
+                                                        <td className="p-2 whitespace-nowrap">
+                                                            <Rating
+                                                                initialRating={bookedService.serviceRating}
+                                                                readonly
+                                                                emptySymbol='far fa-star text-warning'
+                                                                fullSymbol='fas fa-star text-warning'
+                                                            />
+                                                        </td>
 
-                                                    </TableRow>
+                                                        <td className="p-2 whitespace-nowrap">
+                                                            {bookedService.payment ? <div style={{ fontSize: 17 }}>Paid</div> : (
+                                                                <Link className='btn-main py-1 px-2' style={{ fontSize: 17 }} to={`/dashboard/payment/${bookedService._id}`}> Pay Now </Link>
+                                                            )}
+                                                        </td>
+
+                                                        {/* update  */}
+                                                        {/* <td className="p-2 whitespace-nowrap">
+                          <div className="text-lg text-left"><i className="far fa-edit text-indigo-600"></i></div>
+                        </td> */}
+
+                                                        {/* delete button  */}
+                                                        <td className="p-2 whitespace-nowrap">
+                                                            <button onClick={() => handleDeleteBookedService(bookedService._id)} className="text-lg text-left"><i className="far fa-trash-alt text-red-600"></i></button>
+                                                        </td>
+                                                    </tr>
                                                 );
-                                            })}
-                                    </TableBody>
-                                </Table>
-                            </TableContainer>
+                                            })
+                                        }
+                                    </tbody>
+                                </table>
 
-                            <TablePagination
-                                rowsPerPageOptions={[10, 25, 100]}
-                                component="div"
-                                count={bookedServices.length}
-                                rowsPerPage={rowsPerPage}
-                                page={page}
-                                onPageChange={handleChangePage}
-                                onRowsPerPageChange={handleChangeRowsPerPage}
-                            />
-                        </Paper>)
+                            </div>
+
+                        </div>
+                    </div>)
             }
         </>
     );
