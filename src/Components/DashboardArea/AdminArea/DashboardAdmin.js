@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import ManageEngineers from './ManageEngineers/ManageEngineers';
+import ManageUsers from './ManageUsers/ManageUsers';
 
 
 const DashboardAdmin = () => {
@@ -122,7 +122,7 @@ const DashboardAdmin = () => {
                     </Grid>
                 </Grid>
 
-                <div className='mt-5'><ManageEngineers /></div>
+                <div className='mt-5'><ManageUsers /></div>
 
             </Box>
 
