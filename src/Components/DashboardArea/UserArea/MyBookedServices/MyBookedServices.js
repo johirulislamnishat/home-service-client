@@ -138,8 +138,8 @@ const MybookedServices = () => {
                                                         </td>
 
                                                         <td className="p-2 whitespace-nowrap">
-                                                            {bookedService.payment ? <div style={{ fontSize: 17 }}>Paid</div> : (
-                                                                <Link className='btn-main py-1 px-2' style={{ fontSize: 17 }} to={`/dashboard/payment/${bookedService._id}`}> Pay Now </Link>
+                                                            {bookedService.payment ? <div className='text-green-700' style={{ fontSize: 17, fontWeight: 600 }}>Paid</div> : (
+                                                                <Link className='btn-main py-2 px-3' style={{ fontSize: 17 }} to={`/dashboard/payment/${bookedService._id}`}> Pay Now </Link>
                                                             )}
                                                         </td>
 

@@ -3,6 +3,7 @@ import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../../Authentication/Hooks/useAuth';
+import CardInfo from './CardInfo';
 
 
 const Checkout = ({ payService }) => {
@@ -78,9 +79,10 @@ const Checkout = ({ payService }) => {
             setSuccess('');
         } else {
             setError('');
-            setSuccess('Congratulations!!! Payment Successful');
+            setSuccess(<h3 className='text-green-700'>Congratulations!!! Payment Successful</h3>);
             setProcessing(false);
             // console.log(paymentIntent)
+
             //save payment info to database
 
             const payment = {
@@ -139,9 +141,9 @@ const Checkout = ({ payService }) => {
                 success && <p style={{ color: 'green' }}>{success}</p>
             }
 
-            <button style={{ marginTop: 20 }} className='btn-main py-2 px-4'>
-                <Link className='btn-main py-2 px-4' to='/dashboard/cardInfo'>See Card Details</Link>
-            </button>
+            <div style={{ marginTop: 60 }}>
+                <CardInfo />
+            </div>
         </div>
     );
 };

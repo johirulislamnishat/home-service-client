@@ -66,7 +66,7 @@ const UserMenu = () => {
                     onBlur={() => setDropdownOpen(false)}
                 >
                     <div className="pt-0.5 pb-2 px-3 mb-1 border-b border-gray-200">
-                        <div className="font-medium text-gray-800">Bengal Tiger</div>
+                        <div className="font-medium text-gray-800">Home Services</div>
                         <div className="text-xs text-gray-500 italic">Administrator</div>
                     </div>
                     <ul>
