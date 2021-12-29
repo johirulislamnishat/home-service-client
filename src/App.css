@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 html,
 body {
 	scroll-behavior: smooth;
@@ -34,7 +39,10 @@ a:hover {
 	color:#052944
 }
 
-
+.btn-dash{
+	background-color: #ffe52c !important;
+	color: #052944 !important;
+}
 .btn-main{
 	background-color: #ffe52c !important;
 	border-color: transparent !important;

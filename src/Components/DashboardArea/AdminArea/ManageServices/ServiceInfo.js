@@ -6,7 +6,7 @@ import UpdateService from './UpdateService';
 
 const ServiceInfo = ({ service }) => {
 
-    const { serviceName, serviceType, serviceTitle, price, serviceRating } = service;
+    const { mainImage, serviceName, serviceType, serviceTitle, price, serviceRating } = service;
 
     //modal 
     const [open, setOpen] = useState(false);
@@ -37,30 +37,50 @@ const ServiceInfo = ({ service }) => {
 
     return (
         <>
-            <TableRow hover role="checkbox" tabIndex={-1}>
-                <TableCell >
-                    {serviceName}
-                </TableCell>
 
-                <TableCell >
-                    {serviceType}
-                </TableCell>
+            <tr key={service._id}>
+                <td className="p-2 whitespace-nowrap">
+                    <div className="flex items-center">
+                        <div className="w-10 h-10 flex-shrink-0 mr-2 sm:mr-3">
+                            <img className='rounded-md' src={mainImage} width="40" height="40" alt={serviceName} />
+                        </div>
+                        <div className="font-medium text-gray-800">{serviceName}</div>
+                    </div>
+                </td>
+                <td className="p-2 whitespace-nowrap">
+                    <div className="text-left">{serviceType}</div>
+                </td>
 
-                <TableCell >
-                    {serviceTitle}
-                </TableCell>
+                <td className="p-2 whitespace-nowrap">
+                    <div className="text-left">{serviceTitle}</div>
+                </td>
+                <td className="p-2 whitespace-nowrap">
+                    <div className="text-left font-medium text-green-500">$ {price}</div>
+                </td>
 
-                <TableCell> {price} </TableCell>
+                {/* rating  */}
+                <td className="p-2 whitespace-nowrap">
+                    <div className="text-lg text-left">{serviceRating}</div>
+                </td>
 
-                <TableCell> {serviceRating} </TableCell>
+                {/* update  */}
+                {/* <td className="p-2 whitespace-nowrap">
+                          <div className="text-lg text-left"><i className="far fa-edit text-indigo-600"></i></div>
+                        </td> */}
 
-                {/* update */}
-                <TableCell className="border-0" style={{ fontSize: 20 }} > <button className='bg-transparent border-0' onClick={() => handleOpen(service._id)}><i style={{ cursor: 'pointer' }} className="border-0 far fa-edit text-success"></i></button> </TableCell>
+                {/* delete button  */}
+                <td className="p-2 whitespace-nowrap">
+                    <button onClick={() => handleDeleteService(service._id)} className="text-lg text-left"><i className="far fa-trash-alt text-red-600"></i></button>
+                </td>
+            </tr>
 
-                {/* delete */}
-                <TableCell style={{ fontSize: 20 }} > <button className='bg-transparent border-0' onClick={() => handleDeleteService(service._id)}><i style={{ cursor: 'pointer' }} className="far fa-trash-alt text-danger"></i></button> </TableCell>
+            {/* update */}
+            {/* <TableCell className="border-0" style={{ fontSize: 20 }} > <button className='bg-transparent border-0' onClick={() => handleOpen(service._id)}><i style={{ cursor: 'pointer' }} className="border-0 far fa-edit text-success"></i></button> </TableCell> */}
 
-            </TableRow>
+            {/* delete */}
+            {/* <TableCell style={{ fontSize: 20 }} > <button className='bg-transparent border-0' onClick={() => handleDeleteService(service._id)}><i style={{ cursor: 'pointer' }} className="far fa-trash-alt text-danger"></i></button> </TableCell>
+
+            </TableRow> */}
 
             <UpdateService
                 open={open}

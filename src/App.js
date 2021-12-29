@@ -12,6 +12,7 @@ import AuthProvider from './Authentication/Context/AuthProvider';
 import PrivateRoute from './Authentication/PrivateRoute/PrivateRoute';
 import ServicesPage from './Components/ServiceBooking/ServicesPage';
 import Teams from './Components/Teams/Teams';
+import DashboardHome from './Components/DashboardArea/DashboardHome';
 
 function App() {
 
@@ -55,7 +56,7 @@ function App() {
             </PrivateRoute>
 
             <PrivateRoute path="/dashboard">
-              <Dashboard />
+              <DashboardHome />
             </PrivateRoute>
 
             <Route path="/login">

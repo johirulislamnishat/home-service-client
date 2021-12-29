@@ -9,8 +9,8 @@ import CardInfo from './UserArea/Payments/CardInfo';
 import ManageServices from './AdminArea/ManageServices/ManageServices';
 import AddServices from './AdminArea/ManageServices/AddServices';
 import MybookedServices from './UserArea/MyBookedServices/MyBookedServices';
-import AddEngineers from './AdminArea/AddEngineers';
-import ManageEngineers from './AdminArea/ManageEngineers';
+import ManageEngineers from './AdminArea/ManageEngineers/ManageEngineers';
+import AddEngineers from './AdminArea/ManageEngineers/AddEngineers';
 
 
 const DashboardContent = () => {
