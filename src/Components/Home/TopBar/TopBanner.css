@@ -1,9 +1,3 @@
-.carousel,
-.item,
-.active {
-    height: 600px;
-}
-
 .carousel-middle {
   height: 600px;
   background: #000;

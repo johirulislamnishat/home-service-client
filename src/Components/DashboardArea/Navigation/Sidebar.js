@@ -101,7 +101,7 @@ const Sidebar = ({
             <>
 
               {/* Admin Dashboard */}
-              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 'bg-gray-900'}`}>
+              <li className={`px-3 py-3 rounded-sm mb-0.5 last:mb-0 'bg-gray-900'}`}>
                 <NavLink to={`${url}/admin-dashboard`} className={`block text-gray-200 hover:text-white transition duration-150 'hover:text-gray-200'}`}>
                   <div className="flex flex-grow">
                     <svg className="flex-shrink-0 h-6 w-6 mr-3" viewBox="0 0 24 24">
@@ -114,7 +114,7 @@ const Sidebar = ({
               </li>
 
               {/* Add Services */}
-              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0  'bg-gray-900'}`}>
+              <li className={`px-3 py-3 rounded-sm mb-0.5 last:mb-0  'bg-gray-900'}`}>
                 <NavLink to={`${url}/add-services`} className={`block text-gray-200 hover:text-white transition duration-150  'hover:text-gray-200'}`}>
                   <div className="flex items-center justify-between">
                     <div className="flex flex-grow">
@@ -130,7 +130,7 @@ const Sidebar = ({
               </li>
 
               {/* Add Engineers */}
-              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0  'bg-gray-900'}`}>
+              <li className={`px-3 py-3 rounded-sm mb-0.5 last:mb-0  'bg-gray-900'}`}>
                 <NavLink to={`${url}/add-engineers`} className={`block text-gray-200 hover:text-white transition duration-150  'hover:text-gray-200'}`}>
                   <div className="flex flex-grow">
                     <svg className="flex-shrink-0 h-6 w-6 mr-3" viewBox="0 0 24 24">
@@ -143,7 +143,7 @@ const Sidebar = ({
               </li>
 
               {/* Manage Services */}
-              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 $'bg-gray-900'}`}>
+              <li className={`px-3 py-3 rounded-sm mb-0.5 last:mb-0 $'bg-gray-900'}`}>
                 <NavLink to={`${url}/manage-services`} className={`block text-gray-200 hover:text-white transition duration-150 'hover:text-gray-200'}`}>
                   <div className="flex flex-grow">
                     <svg className="flex-shrink-0 h-6 w-6 mr-3" viewBox="0 0 24 24">
@@ -157,7 +157,7 @@ const Sidebar = ({
               </li>
 
               {/* Manage Engineers */}
-              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0  'bg-gray-900'}`}>
+              <li className={`px-3 py-3 rounded-sm mb-0.5 last:mb-0  'bg-gray-900'}`}>
                 <NavLink to={`${url}/manage-engineers`} className={`block text-gray-200 hover:text-white transition duration-150  'hover:text-gray-200'}`}>
                   <div className="flex flex-grow">
                     <svg className="flex-shrink-0 h-6 w-6 mr-3" viewBox="0 0 24 24">
@@ -171,8 +171,23 @@ const Sidebar = ({
                 </NavLink>
               </li>
 
+              {/*Add New Blog */}
+              <li className={`px-3 py-3 rounded-sm mb-0.5 last:mb-0 $'bg-gray-900'}`}>
+                <NavLink to={`${url}/add-new-blog`} className={`block text-gray-200 hover:text-white transition duration-150 'hover:text-gray-200'}`}>
+                  <div className="flex flex-grow">
+                    <svg className="flex-shrink-0 h-6 w-6 mr-3" viewBox="0 0 24 24">
+                      <path className={`fill-current text-gray-600 $'text-indigo-500'}`} d="M8 1v2H3v19h18V3h-5V1h7v23H1V1z" />
+                      <path className={`fill-current text-gray-600 $'text-indigo-500'}`} d="M1 1h22v23H1z" />
+                      <path className={`fill-current text-gray-400 $'text-indigo-300'}`} d="M15 10.586L16.414 12 11 17.414 7.586 14 9 12.586l2 2zM5 0h14v4H5z" />
+                    </svg>
+                    <span className="text-sm font-medium">Publish New Blog</span>
+                  </div>
+                </NavLink>
+              </li>
+
+
               {/*Add New Admin */}
-              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0  'bg-gray-900'}`}>
+              <li className={`px-3 py-3 rounded-sm mb-0.5 last:mb-0  'bg-gray-900'}`}>
                 <NavLink to={`${url}/add-new-admin`} className={`block text-gray-200 hover:text-white transition duration-150  'hover:text-gray-200'}`}>
                   <div className="flex items-center justify-between">
                     <div className="flex flex-grow">
@@ -191,7 +206,7 @@ const Sidebar = ({
 
               {/* User Only Dashboard Menu */}
               {/* Dashboard */}
-              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 'bg-gray-900'}`}>
+              <li className={`px-3 py-3 rounded-sm mb-0.5 last:mb-0 'bg-gray-900'}`}>
                 <NavLink to={`${url}/dashboard`} className={`block text-gray-200 hover:text-white transition duration-150 'hover:text-gray-200'}`}>
                   <div className="flex flex-grow">
                     <svg className="flex-shrink-0 h-6 w-6 mr-3" viewBox="0 0 24 24">
@@ -204,7 +219,7 @@ const Sidebar = ({
               </li>
 
               {/* Booked Service */}
-              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 'bg-gray-900'}`}>
+              <li className={`px-3 py-3 rounded-sm mb-0.5 last:mb-0 'bg-gray-900'}`}>
                 <NavLink to={`${url}/my-booked-service`} className={`block text-gray-200 hover:text-white transition duration-150 'hover:text-gray-200'}`}>
                   <div className="flex items-center justify-between">
                     <div className="flex flex-grow">
@@ -220,7 +235,7 @@ const Sidebar = ({
               </li>
 
               {/* Review */}
-              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0  'bg-gray-900'}`}>
+              <li className={`px-3 py-3 rounded-sm mb-0.5 last:mb-0  'bg-gray-900'}`}>
                 <NavLink to={`${url}/review`} className={`block text-gray-200 hover:text-white transition duration-150  'hover:text-gray-200'}`}>
                   <div className="flex flex-grow">
                     <svg className="flex-shrink-0 h-6 w-6 mr-3" viewBox="0 0 24 24">

@@ -37,7 +37,7 @@ const Engineers = () => {
                                         <div class="frontside">
                                             <div class="card">
                                                 <div class="card-body text-center">
-                                                    <img class="img-fluid" src={engineer.engineerImage} alt="engineers" />
+                                                    <img class="d-inline mb-3" src={engineer.engineerImage} alt="engineers" />
                                                     <h4 class="text-primary mt-2">{engineer.engineerName}</h4>
                                                     <p class="card-text">{engineer.shortDes}</p>
                                                     <a href="#" class="btn-main btn-sm"><i class="fa fa-plus"></i></a>
@@ -53,22 +53,22 @@ const Engineers = () => {
                                                     <ul class="list-inline">
                                                         <li class="list-inline-item">
                                                             <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                                <i class="fa fa-facebook"></i>
+                                                                <i class="fab fa-facebook text-blue-600"></i>
                                                             </a>
                                                         </li>
                                                         <li class="list-inline-item">
                                                             <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                                <i class="fa fa-twitter"></i>
+                                                                <i class="fab fa-twitter text-blue-600"></i>
                                                             </a>
                                                         </li>
                                                         <li class="list-inline-item">
                                                             <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                                <i class="fa fa-skype"></i>
+                                                                <i class="fab fa-skype text-blue-600"></i>
                                                             </a>
                                                         </li>
                                                         <li class="list-inline-item">
                                                             <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                                <i class="fa fa-google"></i>
+                                                                <i class="fab fa-google text-blue-600"></i>
                                                             </a>
                                                         </li>
                                                     </ul>

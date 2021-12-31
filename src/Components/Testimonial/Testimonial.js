@@ -6,12 +6,12 @@ const Testimonial = (props) => {
 	const { quote, name, from, img, rating } = props.reviews;
 	return (
 		<div className="card-deck mt-4 mb-5">
-			<div className="card shadow-sm">
+			<div className="card shadow-md">
 				<div class="card-body">
-					<p class="card-text text-center">{quote}</p>
+					<p class="card-text text-left">{quote}</p>
 				</div>
 				<div className="card-footer d-flex  align-items-center">
-					<img className="mx-3" src={img} alt="user" width="70" height="70" style={{ borderRadius: '50%' }} />
+					<img className="mr-3 rounded-circle" src={img} alt="user" width="60" height="60" />
 					<div>
 						<h6 className="text-primary">{name}</h6>
 

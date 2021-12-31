@@ -1,23 +1,77 @@
-import React from 'react';
-import blogs from '../../Data/blogs';
-import BlogPost from '../BlogPost/BlogPost';
-import './Blogs.css';
+import React, { useState, useEffect } from 'react';
+import { Typography } from '@mui/material';
+import BlogPost from './BlogPost';
+import { Link } from 'react-router-dom';
 
 const Blogs = () => {
+
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/blogs')
+            .then(res => res.json())
+            .then(data => setBlogs(data))
+    }, [])
+
     return (
-        <div className="blogs my-5">
-            <div className="container">
-                <div className="section-header text-center">
-                    <h5 className="text-primary text-uppercase">our blog</h5>
-                    <h1 className="style-color">Read More And Learn More</h1>
-                </div>
-                <div className="card-deck mt-5">
+        <>
+            <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
+                <Typography sx={{ color: "#2097fc", mb: 2, mt: 10, textAlign: 'center' }} variant="h6" component="div">
+                    Blogs
+                </Typography>
+                <Typography sx={{ textAlign: 'center' }} variant="h4" component="div">
+                    Lets Learn More
+                </Typography>
+                <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10 mt-5">
+
                     {
-                        blogs.map(blog => <BlogPost blog={blog} />)
+                        blogs.map(blog => {
+                            return (
+                                <div key={blog._id} class="rounded overflow-hidden shadow-lg">
+                                    <div class="relative">
+                                        <img class="w-full" src={blog.blogMainImage} alt="home service" />
+                                        <div class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
+
+                                        <div class="absolute bottom-0 left-0 bg-indigo-600 px-4 py-2 text-white text-sm  hover:text-indigo-600 transition duration-500 ease-in-out">
+                                            {blog.itemTag}
+                                        </div>
+                                        <a href="!#"><div class="text-sm absolute top-0 right-0 bg-indigo-600 px-4 text-white rounded-full h-16 w-16 flex flex-col items-center justify-center mt-3 mr-3hover:text-blue-500 transition duration-500 ease-in-out">
+                                            <span class="font-bold">{blog.tags}</span>
+
+                                        </div></a>
+                                    </div>
+                                    <div class="px-6 py-4">
+                                        <p class="font-semibold text-lg inline-block hover:text-blue-500 transition duration-500 ease-in-out text-left">{blog.blogTitle}</p>
+                                        <p class="text-gray-500 text-sm text-left">
+                                            {blog.shortDescription}
+                                        </p>
+                                    </div>
+                                    <div className='flex justify-between items-center'>
+                                        <div class="px-6 py-4 flex flex-row items-center">
+                                            <span href="#" class="py-1 text-sm font-regular text-gray-900 mr-1 flex flex-row items-center">
+                                                <svg height="13px" width="13px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                    viewBox="0 0 512 512" style={{ enableBackground: 'new 0 0 512 512' }}>
+                                                    <g>
+                                                        <g>
+                                                            <path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M277.333,256
+                c0,11.797-9.536,21.333-21.333,21.333h-85.333c-11.797,0-21.333-9.536-21.333-21.333s9.536-21.333,21.333-21.333h64v-128
+                c0-11.797,9.536-21.333,21.333-21.333s21.333,9.536,21.333,21.333V256z"/>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                <span class="ml-1">{blog.readingTime} mins ago</span></span>
+                                        </div>
+
+                                        <Link to={`/blogs/${blog._id}`} className='mr-6 btn-main py-2 px-4  '> Read More
+                                        </Link>
+                                    </div>
+                                </div>
+                            );
+                        })
                     }
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

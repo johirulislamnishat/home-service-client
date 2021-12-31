@@ -14,6 +14,7 @@ import MybookedServices from './UserArea/MyBookedServices/MyBookedServices';
 import AddEngineers from './AdminArea/ManageEngineers/AddEngineers';
 import ManageEngineers from './AdminArea/ManageEngineers/ManageEngineers';
 import DashboardAdmin from './AdminArea/DashboardAdmin';
+import AddBlogs from './AdminArea/ManageBlogs/AddBlogs';
 
 const DashboardHome = () => {
 
@@ -61,6 +62,10 @@ const DashboardHome = () => {
 
                             <Route path={`${path}/manage-engineers`}>
                                 <ManageEngineers />
+                            </Route>
+
+                            <Route path={`${path}/add-new-blog`}>
+                                <AddBlogs />
                             </Route>
 
                             <Route path={`${path}/add-new-admin`}>

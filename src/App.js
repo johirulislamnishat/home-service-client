@@ -7,12 +7,12 @@ import Registration from './Authentication/Registration/Registration';
 import Sneackbar from './Components/Sneackbar';
 import NotFound from './Components/SinglePages/NotFound';
 import Contact from './Components/SinglePages/ContactUs';
-import Dashboard from './Components/DashboardArea/Dashboard';
 import AuthProvider from './Authentication/Context/AuthProvider';
 import PrivateRoute from './Authentication/PrivateRoute/PrivateRoute';
 import ServicesPage from './Components/ServiceBooking/ServicesPage';
 import Teams from './Components/Teams/Teams';
 import DashboardHome from './Components/DashboardArea/DashboardHome';
+import BlogPost from './Components/Blogs/BlogPost';
 
 function App() {
 
@@ -49,6 +49,10 @@ function App() {
 
             <Route path="/snackbar">
               <Sneackbar />
+            </Route>
+
+            <Route path="/blogs/:id">
+              <BlogPost />
             </Route>
 
             <PrivateRoute path="/services">
