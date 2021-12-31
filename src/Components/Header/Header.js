@@ -49,6 +49,11 @@ const Header = () => {
 						<nav className="Nav">
 
 							<Link to="/"> Home </Link>
+
+							<Link to="/dashboard/dashboard">
+								Dashboard
+							</Link>
+
 							<Link to="/services">
 								Services
 							</Link>
@@ -57,8 +62,8 @@ const Header = () => {
 								Teams
 							</Link>
 
-							<Link to="/dashboard/dashboard">
-								Dashboard
+							<Link to="/blogs">
+								Blogs
 							</Link>
 
 							<Link to="/contact">
@@ -66,7 +71,7 @@ const Header = () => {
 							</Link>
 
 							{user?.email ?
-								<Link className='btn-main py-2 px-4' onClick={logOut} to="/">
+								<Link className='ml-5 btn-main py-2 px-4' onClick={logOut} to="/">
 									Sign Out
 								</Link> : <Link className='btn-main py-2 px-4' to="/login">
 									Sign In

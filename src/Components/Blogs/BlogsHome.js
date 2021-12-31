@@ -1,67 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import { Grid } from '@mui/material';
-import { Box } from '@mui/system';
 
-
-const Blogs = () => {
-
-    const banner = {
-
-        backgroundColor: '#2095fc07',
-        backgroundBlendMode: 'darken',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-    }
+const BlogsHome = () => {
 
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:5000/blogs')
             .then(res => res.json())
-            .then(data => setBlogs(data))
+            .then(data => setBlogs(data.slice(0, 6)))
     }, [])
 
     return (
         <>
-
-            <Header />
-
-            <div>
-                <Box style={banner} sx={{ flexGrow: 1, paddingTop: 5, paddingBottom: 5 }}>
-                    <Container>
-                        <Grid container spacing={2}>
-
-                            <Grid item xs={12} md={7} sx={{ display: "flex", justifyContent: "center" }}>
-                                <img style={{ width: '70%', padding: 15, }} src='https://i.ibb.co/ZKLS40f/slide1.png' alt="" />
-                            </Grid>
-
-                            <Grid item xs={12} md={5} sx={{ display: "flex", justifyContent: "flex-start", alignItems: 'center', textAlign: "left", paddingY: 4 }}>
-                                <Box>
-                                    <Typography className='text-primary' variant="h5">
-                                        We are proving all type of cleaning solutions for every small and big businesses.    </Typography>
-
-                                    <Typography paragraph className='text-main' sx={{ marginTop: 2 }} >
-                                        Booking professional picture hangers through Handy gives you complete control over when and where they turn up. It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its
-                                    </Typography>
-
-
-                                    <Link to='/services' uppercase='true'>
-                                        <button className=" btn-main py-1 px-3 mt-5">Get Our Service</button>
-                                    </Link>
-                                </Box>
-                            </Grid>
-
-                        </Grid>
-                    </Container>
-                </Box>
-            </div>
-
-            <div class="mb-15 max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
+            <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
                 <Typography sx={{ color: "#2097fc", mb: 2, mt: 10, textAlign: 'center' }} variant="h6" component="div">
                     Blogs
                 </Typography>
@@ -119,10 +72,8 @@ const Blogs = () => {
                     }
                 </div>
             </div>
-
-            <Footer />
         </>
     );
 };
 
-export default Blogs;
+export default BlogsHome;

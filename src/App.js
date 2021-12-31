@@ -13,6 +13,7 @@ import ServicesPage from './Components/ServiceBooking/ServicesPage';
 import Teams from './Components/Teams/Teams';
 import DashboardHome from './Components/DashboardArea/DashboardHome';
 import BlogPost from './Components/Blogs/BlogPost';
+import Blogs from './Components/Blogs/Blogs';
 
 function App() {
 
@@ -51,6 +52,9 @@ function App() {
               <Sneackbar />
             </Route>
 
+            <Route path="/blogs">
+              <Blogs />
+            </Route>
             <Route path="/blogs/:id">
               <BlogPost />
             </Route>
