@@ -15,6 +15,7 @@ import AddEngineers from './AdminArea/ManageEngineers/AddEngineers';
 import ManageEngineers from './AdminArea/ManageEngineers/ManageEngineers';
 import DashboardAdmin from './AdminArea/DashboardAdmin';
 import AddBlogs from './AdminArea/ManageBlogs/AddBlogs';
+import ManageBlogs from './AdminArea/ManageBlogs/ManageBlogs';
 
 const DashboardHome = () => {
 
@@ -66,6 +67,10 @@ const DashboardHome = () => {
 
                             <Route path={`${path}/add-new-blog`}>
                                 <AddBlogs />
+                            </Route>
+
+                            <Route path={`${path}/manage-blogs`}>
+                                <ManageBlogs />
                             </Route>
 
                             <Route path={`${path}/add-new-admin`}>

@@ -12,8 +12,6 @@ const ManageServices = () => {
             .then(data => setServices(data))
     }, [])
 
-
-
     return (
         <>
             <div className="col-span-full xl:col-span-6 bg-white shadow-lg rounded-sm border border-gray-200">
