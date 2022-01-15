@@ -7,7 +7,7 @@ const Package = () => {
     return (
         <>
             <div id="generic_price_table">
-                <div class="container">
+                <div className="container">
                     <Typography sx={{ color: "#2097fc", mb: 2, mt: 10, textAlign: 'center' }} variant="h6" component="div">
                         CHOOSE A PACKAGE                    </Typography>
                     <Typography sx={{ textAlign: 'center' }} variant="h4" component="div">
@@ -16,21 +16,21 @@ const Package = () => {
                     <div>
 
                         {/*BLOCK ROW START*/}
-                        <div class="row mt-5">
-                            <div class="col-md-4">
+                        <div className="row mt-5">
+                            <div className="col-md-4">
 
                                 {/*PRICE CONTENT START*/}
-                                <div class="generic_content clearfix">
+                                <div className="generic_content clearfix">
 
                                     {/*HEAD PRICE DETAIL START*/}
-                                    <div class="generic_head_price clearfix">
+                                    <div className="generic_head_price clearfix">
 
                                         {/*HEAD CONTENT START*/}
-                                        <div class="generic_head_content clearfix">
+                                        <div className="generic_head_content clearfix">
 
                                             {/*HEAD START*/}
-                                            <div class="head_bg"></div>
-                                            <div class="head">
+                                            <div className="head_bg"></div>
+                                            <div className="head">
                                                 <span>Small</span>
                                             </div>
                                             {/*HEAD END*/}
@@ -39,12 +39,12 @@ const Package = () => {
                                         {/*HEAD CONTENT END*/}
 
                                         {/*PRICE START*/}
-                                        <div class="generic_price_tag clearfix">
-                                            <span class="price">
-                                                <span class="sign">৳</span>
-                                                <span class="currency">99</span>
-                                                <span class="cent">.99</span>
-                                                <span class="month">/MON</span>
+                                        <div className="generic_price_tag clearfix">
+                                            <span className="price">
+                                                <span className="sign">৳</span>
+                                                <span className="currency">99</span>
+                                                <span className="cent">.99</span>
+                                                <span className="month">/MON</span>
                                             </span>
                                         </div>
                                         {/*PRICE END*/}
@@ -53,7 +53,7 @@ const Package = () => {
                                     {/*HEAD PRICE DETAIL END*/}
 
                                     {/*FEATURE LIST START*/}
-                                    <div class="generic_feature_list">
+                                    <div className="generic_feature_list">
                                         <ul>
                                             <li><span>Ceiling</span>  & Bath Fans</li>
                                             <li><span>Garbage</span> Disposal</li>
@@ -65,8 +65,8 @@ const Package = () => {
                                     {/*FEATURE LIST END*/}
 
                                     {/*BUTTON START*/}
-                                    <div class="generic_price_btn clearfix">
-                                        <Link to='/contact' class="" >Contact</Link>
+                                    <div className="generic_price_btn clearfix">
+                                        <Link to='/contact' className="" >Contact</Link>
                                     </div>
                                     {/*BUTTON END*/}
 
@@ -75,20 +75,20 @@ const Package = () => {
 
                             </div>
 
-                            <div class="col-md-4">
+                            <div className="col-md-4">
 
                                 {/*PRICE CONTENT START*/}
-                                <div class="generic_content active clearfix">
+                                <div className="generic_content active clearfix">
 
                                     {/*HEAD PRICE DETAIL START*/}
-                                    <div class="generic_head_price clearfix">
+                                    <div className="generic_head_price clearfix">
 
                                         {/*HEAD CONTENT START*/}
-                                        <div class="generic_head_content clearfix">
+                                        <div className="generic_head_content clearfix">
 
                                             {/*HEAD START*/}
-                                            <div class="head_bg"></div>
-                                            <div class="head">
+                                            <div className="head_bg"></div>
+                                            <div className="head">
                                                 <span>Medium</span>
                                             </div>
                                             {/*HEAD END*/}
@@ -97,12 +97,12 @@ const Package = () => {
                                         {/*HEAD CONTENT END*/}
 
                                         {/*PRICE START*/}
-                                        <div class="generic_price_tag clearfix">
-                                            <span class="price">
-                                                <span class="sign">৳</span>
-                                                <span class="currency">999</span>
-                                                <span class="cent">.99</span>
-                                                <span class="month">/MON</span>
+                                        <div className="generic_price_tag clearfix">
+                                            <span className="price">
+                                                <span className="sign">৳</span>
+                                                <span className="currency">999</span>
+                                                <span className="cent">.99</span>
+                                                <span className="month">/MON</span>
                                             </span>
                                         </div>
                                         {/*PRICE END*/}
@@ -111,7 +111,7 @@ const Package = () => {
                                     {/*HEAD PRICE DETAIL END*/}
 
                                     {/*FEATURE LIST START*/}
-                                    <div class="generic_feature_list">
+                                    <div className="generic_feature_list">
                                         <ul>
                                             <li><span>Baseboard</span> Painting</li>
                                             <li><span>Doorframe</span> Painting</li>
@@ -123,8 +123,8 @@ const Package = () => {
                                     {/*FEATURE LIST END*/}
 
                                     {/*BUTTON START*/}
-                                    <div class="generic_price_btn clearfix">
-                                        <Link to='/contact' class="" >Contact</Link>
+                                    <div className="generic_price_btn clearfix">
+                                        <Link to='/contact' className="" >Contact</Link>
                                     </div>
                                     {/*BUTTON END*/}
 
@@ -132,20 +132,20 @@ const Package = () => {
                                 {/*PRICE CONTENT END*/}
 
                             </div>
-                            <div class="col-md-4">
+                            <div className="col-md-4">
 
                                 {/*PRICE CONTENT START*/}
-                                <div class="generic_content clearfix">
+                                <div className="generic_content clearfix">
 
                                     {/*HEAD PRICE DETAIL START*/}
-                                    <div class="generic_head_price clearfix">
+                                    <div className="generic_head_price clearfix">
 
                                         {/*HEAD CONTENT START*/}
-                                        <div class="generic_head_content clearfix">
+                                        <div className="generic_head_content clearfix">
 
                                             {/*HEAD START*/}
-                                            <div class="head_bg"></div>
-                                            <div class="head">
+                                            <div className="head_bg"></div>
+                                            <div className="head">
                                                 <span>Enterprise</span>
                                             </div>
                                             {/*HEAD END*/}
@@ -154,12 +154,12 @@ const Package = () => {
                                         {/*HEAD CONTENT END*/}
 
                                         {/*PRICE START*/}
-                                        <div class="generic_price_tag clearfix">
-                                            <span class="price">
-                                                <span class="sign">৳</span>
-                                                <span class="currency">9999</span>
-                                                <span class="cent">.99</span>
-                                                <span class="month">/MON</span>
+                                        <div className="generic_price_tag clearfix">
+                                            <span className="price">
+                                                <span className="sign">৳</span>
+                                                <span className="currency">9999</span>
+                                                <span className="cent">.99</span>
+                                                <span className="month">/MON</span>
                                             </span>
                                         </div>
                                         {/*PRICE END*/}
@@ -168,7 +168,7 @@ const Package = () => {
                                     {/*HEAD PRICE DETAIL END*/}
 
                                     {/*FEATURE LIST START*/}
-                                    <div class="generic_feature_list">
+                                    <div className="generic_feature_list">
                                         <ul>
                                             <li><span>Crown</span> Molding Painting</li>
                                             <li><span>
@@ -181,8 +181,8 @@ const Package = () => {
                                     {/*FEATURE LIST END*/}
 
                                     {/*BUTTON START*/}
-                                    <div class="generic_price_btn clearfix">
-                                        <Link to='/contact' class="" >Contact</Link>
+                                    <div className="generic_price_btn clearfix">
+                                        <Link to='/contact' className="" >Contact</Link>
                                     </div>
                                     {/*BUTTON END*/}
 

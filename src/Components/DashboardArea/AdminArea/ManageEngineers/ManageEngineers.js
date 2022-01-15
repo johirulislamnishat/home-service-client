@@ -15,7 +15,7 @@ const ManageEngineers = () => {
     const [engineers, setEngineers] = useState([]);
 
     useEffect(() => {
-        const url = (`http://localhost:5000/engineers/`)
+        const url = (`https://home-service24.herokuapp.com/engineers/`)
         fetch(url)
             .then(res => res.json())
             // .then(data => console.log(data))

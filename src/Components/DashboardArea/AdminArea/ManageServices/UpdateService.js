@@ -27,7 +27,7 @@ const UpdateService = ({ open, handleClose, service }) => {
         // }
 
         //send data to server
-        // fetch('http://localhost:5000/services', {
+        // fetch('https://home-service24.herokuapp.com/services', {
         //     method: 'POST',
         //     headers: {
         //         'content-type': 'application/json'
@@ -118,7 +118,7 @@ const UpdateService = ({ open, handleClose, service }) => {
                             defaultValue={serviceRating}
                         />
 
-                        <input class="btn btn-primary my-2" type="submit" value="Confirm" />
+                        <input className="btn btn-primary my-2" type="submit" value="Confirm" />
 
                     </form>
 

@@ -15,7 +15,7 @@ const MybookedServices = () => {
     // console.log(email)
 
     useEffect(() => {
-        const url = (`http://localhost:5000/bookedService/${email}`)
+        const url = (`https://home-service24.herokuapp.com/bookedService/${email}`)
         fetch(url)
             .then(res => res.json())
             // .then(data => console.log(data))
@@ -28,7 +28,7 @@ const MybookedServices = () => {
     const handleDeleteBookedService = id => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/cancelBookedServices/${id}`;
+            const url = `https://home-service24.herokuapp.com/cancelBookedServices/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

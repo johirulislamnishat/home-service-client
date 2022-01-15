@@ -79,7 +79,7 @@ const Header = () => {
 						</nav>
 					</CSSTransition>
 					<button onClick={toggleNav} className="Burger">
-						<i class="fas fa-bars"></i>
+						<i className="fas fa-bars"></i>
 					</button>
 				</div>
 			</div>

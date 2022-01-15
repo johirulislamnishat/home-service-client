@@ -15,7 +15,7 @@ const BlogInfo = ({ blog }) => {
     const handleDeleteBlog = id => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/deleteBlogs/${id}`;
+            const url = `https://home-service24.herokuapp.com/deleteBlogs/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

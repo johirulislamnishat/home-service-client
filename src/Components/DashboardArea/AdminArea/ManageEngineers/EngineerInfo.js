@@ -11,7 +11,7 @@ const EngineerInfo = ({ engineer }) => {
     const handleDeleteEngineer = id => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if (proceed) {
-            const url = `http://localhost:5000/deleteEngineer/${id}`;
+            const url = `https://home-service24.herokuapp.com/deleteEngineer/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -13,7 +13,7 @@ const AddBlogs = () => {
 
     const onSubmit = data => {
         // console.log(data);
-        axios.post('http://localhost:5000/blogs', data)
+        axios.post('https://home-service24.herokuapp.com/blogs', data)
             .then(res => {
                 // console.log(res);
                 if (res.data.insertedId) {

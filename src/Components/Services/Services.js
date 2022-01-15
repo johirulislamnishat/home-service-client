@@ -14,7 +14,7 @@ const Services = () => {
     // const { isLoading } = useAuth();
 
     useEffect(() => {
-        const url = ('http://localhost:5000/services')
+        const url = ('https://home-service24.herokuapp.com/services')
         fetch(url)
             .then(res => res.json())
             // .then(data => console.log(data))

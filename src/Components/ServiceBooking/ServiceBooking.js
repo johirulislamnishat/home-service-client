@@ -31,7 +31,7 @@ const ServiceBooking = ({ service }) => {
 
                     <CardActions sx={{ display: 'flex', justifyContent: 'center', }}>
 
-                        <input onClick={handleOpen} class="btn-main button-style mt-3 py-2 px-3" type="submit" value="Book A Service" />
+                        <input onClick={handleOpen} className="btn-main button-style mt-3 py-2 px-3" type="submit" value="Book A Service" />
                     </CardActions>
                 </div>
             </Grid>

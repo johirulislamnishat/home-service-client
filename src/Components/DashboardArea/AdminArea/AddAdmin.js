@@ -14,7 +14,7 @@ const AddAdmin = () => {
         // console.log(data);
         // console.log(data)
 
-        axios.put('http://localhost:5000/users/admin', data)
+        axios.put('https://home-service24.herokuapp.com/users/admin', data)
             .then(res => {
                 // console.log(res.data);
                 if (res.data.upsertCount) {
@@ -66,21 +66,21 @@ const AddAdmin = () => {
                 </div>
             </div>
 
-            {/* <div class="form-box">
+            {/* <div className="form-box">
                 <h1>Add A New Admin</h1>
 
                 <form className='mt-5' onSubmit={handleSubmit(onSubmit)}>
-                    <div class="form-group">
+                    <div className="form-group">
                         <label>Email</label>
                         <input
                             {...register("email")}
                             type="email" required
                             placeholder="Enter Admin Email"
-                            class="form-control" />
+                            className="form-control" />
                         {errors.exampleRequired && <span>This field is required</span>}
                     </div>
 
-                    <input class="btn-main py-2 px-3" type="submit" value="Submit" />
+                    <input className="btn-main py-2 px-3" type="submit" value="Submit" />
                 </form>
             </div> */}
         </div>

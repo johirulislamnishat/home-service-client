@@ -9,7 +9,7 @@ const TopInfographic = ({ infographic }) => {
         <Card sx={{ minWidth: 275, boxShadow: 0, mt: 10 }}>
             <CardContent >
 
-                <i style={{ fontSize: 50, textAlign: 'center', width: '100%', height: '80', marginBottom: 10, color: '#2097fc' }} class={image}></i>
+                <i style={{ fontSize: 50, textAlign: 'center', width: '100%', height: '80', marginBottom: 10, color: '#2097fc' }} className={image}></i>
 
                 <Typography sx={{ textAlign: 'center', my: 2 }} variant="h5" component="div">
                     {name}

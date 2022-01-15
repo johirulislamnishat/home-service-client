@@ -10,7 +10,7 @@ const DashboardAdmin = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://home-service24.herokuapp.com/services')
             .then(res => res.json())
             .then(data => setServices(data.length))
     }, [])
@@ -19,7 +19,7 @@ const DashboardAdmin = () => {
     const [bookings, setBookings] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/bookedServices')
+        fetch('https://home-service24.herokuapp.com/bookedServices')
             .then(res => res.json())
             .then(data => setBookings(data.length))
     }, [])
@@ -28,7 +28,7 @@ const DashboardAdmin = () => {
     const [engineers, setEngineers] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/engineers')
+        fetch('https://home-service24.herokuapp.com/engineers')
             .then(res => res.json())
             .then(data => setEngineers(data.length))
     }, [])

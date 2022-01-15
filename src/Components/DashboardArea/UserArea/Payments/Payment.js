@@ -14,7 +14,7 @@ const Payment = () => {
     // console.log(serviceId)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/bookedServices/${serviceId}`)
+        fetch(`https://home-service24.herokuapp.com/bookedServices/${serviceId}`)
             .then(res => res.json())
             .then(data => setPayService(data))
     }, [serviceId])

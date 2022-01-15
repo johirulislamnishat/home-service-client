@@ -32,7 +32,7 @@ const BookingModal = ({ open, handleClose, service }) => {
         }
 
         //send data to server
-        fetch('http://localhost:5000/bookedServices', {
+        fetch('https://home-service24.herokuapp.com/bookedServices', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -155,7 +155,7 @@ const BookingModal = ({ open, handleClose, service }) => {
                             label="Address"
                         />
 
-                        <input class="btn-main my-3 py-2 px-3" type="submit" value="Submit" />
+                        <input className="btn-main my-3 py-2 px-3" type="submit" value="Submit" />
 
                     </form>
 

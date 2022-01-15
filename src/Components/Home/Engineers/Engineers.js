@@ -12,7 +12,7 @@ const Engineers = () => {
     // const { isLoading } = useAuth();
 
     useEffect(() => {
-        const url = ('http://localhost:5000/engineers')
+        const url = ('https://home-service24.herokuapp.com/engineers')
         fetch(url)
             .then(res => res.json())
             // .then(data => console.log(data))
@@ -32,43 +32,43 @@ const Engineers = () => {
                     <Grid style={{ marginTop: 40 }} container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 12, md: 12 }} >
                         {engineers.map((engineer, index) => (
                             <Grid item xs={4} sm={6} md={4} key={index}>
-                                <div class="image-flip" >
-                                    <div class="mainflip flip-0">
-                                        <div class="frontside">
-                                            <div class="card">
-                                                <div class="card-body text-center">
-                                                    <img class="d-inline mb-3" src={engineer.engineerImage} alt="engineers" />
-                                                    <h4 class="text-primary mt-2">{engineer.engineerName}</h4>
-                                                    <p class="card-text">{engineer.shortDes}</p>
-                                                    <a href="#" class="btn-main btn-sm"><i class="fa fa-plus"></i></a>
+                                <div className="image-flip" >
+                                    <div className="mainflip flip-0">
+                                        <div className="frontside">
+                                            <div className="card">
+                                                <div className="card-body text-center">
+                                                    <img className="d-inline mb-3" src={engineer.engineerImage} alt="engineers" />
+                                                    <h4 className="text-primary mt-2">{engineer.engineerName}</h4>
+                                                    <p className="card-text">{engineer.shortDes}</p>
+                                                    <a href="#" className="btn-main btn-sm"><i className="fa fa-plus"></i></a>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="backside">
-                                            <div class="card">
-                                                <div class="card-body text-center mt-4">
-                                                    <h4 class="text-primary">{engineer.engineerName}</h4>
-                                                    <p class="card-text">{engineer.longDes}</p>
-                                                    <ul class="list-inline">
-                                                        <li class="list-inline-item">
-                                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                                <i class="fab fa-facebook text-blue-600"></i>
+                                        <div className="backside">
+                                            <div className="card">
+                                                <div className="card-body text-center mt-4">
+                                                    <h4 className="text-primary">{engineer.engineerName}</h4>
+                                                    <p className="card-text">{engineer.longDes}</p>
+                                                    <ul className="list-inline">
+                                                        <li className="list-inline-item">
+                                                            <a className="social-icon text-xs-center" target="_blank" href="#">
+                                                                <i className="fab fa-facebook text-blue-600"></i>
                                                             </a>
                                                         </li>
-                                                        <li class="list-inline-item">
-                                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                                <i class="fab fa-twitter text-blue-600"></i>
+                                                        <li className="list-inline-item">
+                                                            <a className="social-icon text-xs-center" target="_blank" href="#">
+                                                                <i className="fab fa-twitter text-blue-600"></i>
                                                             </a>
                                                         </li>
-                                                        <li class="list-inline-item">
-                                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                                <i class="fab fa-skype text-blue-600"></i>
+                                                        <li className="list-inline-item">
+                                                            <a className="social-icon text-xs-center" target="_blank" href="#">
+                                                                <i className="fab fa-skype text-blue-600"></i>
                                                             </a>
                                                         </li>
-                                                        <li class="list-inline-item">
-                                                            <a class="social-icon text-xs-center" target="_blank" href="#">
-                                                                <i class="fab fa-google text-blue-600"></i>
+                                                        <li className="list-inline-item">
+                                                            <a className="social-icon text-xs-center" target="_blank" href="#">
+                                                                <i className="fab fa-google text-blue-600"></i>
                                                             </a>
                                                         </li>
                                                     </ul>
